@@ -1,10 +1,18 @@
 Package: stldata
-Title: What the Package Does (one line, title case)
+Title: Contains data on the City of St. Louis for teaching purposes
 Version: 0.0.0.9000
-Authors@R: person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+Authors@R: person("Christopher", "Prener", email = "prenercg@slu.edu", 
+    role = c("aut", "cre"))
+Description: This package contains various datasets representing the City of St. Louis. 
+    These datasets are primary designed for teaching statistics, data science, and 
+    spatial data analysis using R.
 Depends: R (>= 3.3.2)
-License: What license is it under?
+Suggests:
+    broom,
+    dplyr,
+    ggplot2,
+    tibble
+License: CC0
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.0.1
