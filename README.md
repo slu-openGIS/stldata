@@ -1,18 +1,7 @@
----
-output: github_document
----
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-
-```{r, echo = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>",
-  fig.path = "README-"
-)
-```
-
-# `stldata`
+`stldata`
+=========
 
 The `stldata` package contains various datasets representing the City of St. Louis. These datasets are primary designed for teaching statistics, data science, and spatial data analysis using R.
 
@@ -20,6 +9,6 @@ The `stldata` package contains various datasets representing the City of St. Lou
 
 Install from GitHub:
 
-```r
+``` r
 devtools::install_github("chris-prener/stldata")
 ```
