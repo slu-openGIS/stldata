@@ -9,19 +9,12 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-Download and install the `stldata` package:
-
-```{r}
-devtools::install_github("chris-prener/stldata")
-```
-
 Open and explore the St. Louis murder date:
 
 ```{r}
 library("stldata")
-library("tibble")
 
-murders <- as_data_frame(stlMurders)
-stlMurders
+murders <- stlMurders
+str(murders)
 ```
 
