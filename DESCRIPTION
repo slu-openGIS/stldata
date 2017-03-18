@@ -19,4 +19,3 @@ LazyData: true
 URL: https://github.com/chris-prener/stldata
 BugReports: https://github.com/chris-prener/stldata/issues
 RoxygenNote: 6.0.1
-VignetteBuilder: knitr
