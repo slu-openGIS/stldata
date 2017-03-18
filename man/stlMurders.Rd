@@ -20,7 +20,7 @@
   ...
 }}
 \source{
-\herf{http://www.slmpd.org/}{St. Louis Metorpolitan Police Department}
+\href{http://www.slmpd.org/}{St. Louis Metorpolitan Police Department}
 }
 \usage{
 data(stlMurders)
