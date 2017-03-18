@@ -1,8 +1,8 @@
 Package: stldata
 Title: Contains data on the City of St. Louis for teaching purposes
 Version: 0.1
-Authors@R: person("Christopher", "Prener", email = "prenercg@slu.edu", 
-    role = c("aut", "cre"))
+Author: Christopher Prener <prenercg@slu.edu>
+Maintainer: Christopher Prener <prenercg@slu.edu>
 Description: This package contains various datasets representing the City of St. Louis. 
     These datasets are primary designed for teaching statistics, data science, and 
     spatial data analysis using R.
