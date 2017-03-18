@@ -7,7 +7,7 @@
 \format{A data frame with 1394 rows and 11 variables:
 \describe{
   \item{id}{STLMPD record number}
-  \item{date}{string date in dmy format for when murder occurred}
+  \item{fullDate}{string date in dmy format for when murder occurred}
   \item{year}{year murder occurred}
   \item{month}{month murder occurred}
   \item{day}{day of month murder occurred}
