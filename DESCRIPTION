@@ -3,7 +3,7 @@ Title: City of St. Louis Data
 Version: 0.1.0
 Author: Christopher Prener <prenercg@slu.edu>
 Maintainer: Christopher Prener <prenercg@slu.edu>
-Description: This package contains various datasets representing the City of St. Louis. 
+Description: Contains various datasets representing the City of St. Louis. 
     These datasets are primary designed for teaching statistics, data science, and 
     spatial data analysis using R.
 Depends: R (>= 3.3.2)
