@@ -42,7 +42,12 @@
 #'     stlMurders %>%
 #'       group_by(year) %>%
 #'       summarize(n_obs = n()) %>%
-#'       arrange(year)
+#'       arrange(year) %>%
+#'       ggplot(aes(x = year, y = n_obs)) +
+#'         geom_bar(stat="identity") +
+#'         scale_x_continuous(breaks = c(2008:2016),
+#'           labels = factor(2008:2016))
+#'
 #' }
 #'
 "stlMurders"
