@@ -1,6 +1,6 @@
 Package: stldata
 Title: Contains data on the City of St. Louis for teaching purposes
-Version: 0.0.0.9000
+Version: 0.1
 Authors@R: person("Christopher", "Prener", email = "prenercg@slu.edu", 
     role = c("aut", "cre"))
 Description: This package contains various datasets representing the City of St. Louis. 
