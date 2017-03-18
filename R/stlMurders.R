@@ -21,7 +21,7 @@
 #'   \item{street}{street where murder occurred}
 #'   ...
 #' }
-#' @source \url{http://www.slmpd.org/Crimereports.shtml}
+#' @source \herf{http://www.slmpd.org/}{St. Louis Metorpolitan Police Department}
 #' @references Asher, J. (2017, January 9). U.S. Cities Experienced Another Big Rise In Murder In 2016. \emph{FiveThiryEight}, retrived from \href{https://fivethirtyeight.com/features/u-s-cities-experienced-another-big-rise-in-murder-in-2016/}{website}.
 #'
 #' @examples
