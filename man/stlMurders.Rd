@@ -17,7 +17,6 @@
   \item{nhood}{neighborhood where murder occurred, see \href{https://www.stlouis-mo.gov/government/departments/planning/documents/upload/CitywideNeighborhoodMap.pdf}{for values}}
   \item{address}{house address where murder occurred}
   \item{street}{street where murder occurred}
-  ...
 }}
 \source{
 St. Louis Metropolitan Police Department

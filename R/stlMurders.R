@@ -19,7 +19,6 @@
 #'   \item{nhood}{neighborhood where murder occurred, see \href{https://www.stlouis-mo.gov/government/departments/planning/documents/upload/CitywideNeighborhoodMap.pdf}{for values}}
 #'   \item{address}{house address where murder occurred}
 #'   \item{street}{street where murder occurred}
-#'   ...
 #' }
 #' @source St. Louis Metropolitan Police Department
 #' @references Asher, J. (2017, January 9). U.S. Cities Experienced Another Big Rise In Murder In 2016. \emph{FiveThiryEight}, retrived from \href{https://fivethirtyeight.com/features/u-s-cities-experienced-another-big-rise-in-murder-in-2016/}{website}.
