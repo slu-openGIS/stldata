@@ -4,27 +4,58 @@
 \name{stlMurders}
 \alias{stlMurders}
 \title{City of St. Louis Murders, 2008-2016}
-\format{A data frame with 1394 rows and 10 variables:
+\format{A data frame with 1394 rows and 11 variables:
 \describe{
   \item{id}{STLMPD record number}
-  \item{dateoccurred}{string date in dmy format for when murder occurred}
-  \item{yearoccurred}{year murder occurred}
-  \item{monthoccurred}{month murder occurred}
-  \item{timeoccurred}{time murder occurred in 24-hour clock}
-  \item{description}{\code{HOMICIDE}}
+  \item{date}{string date in dmy format for when murder occurred}
+  \item{year}{year murder occurred}
+  \item{month}{month murder occurred}
+  \item{day}{day of month murder occurred}
+  \item{time}{time murder occurred in 24-hour clock}
+  \item{descrip}{\code{HOMICIDE}}
   \item{district}{SLMPD district where murder occurred}
-  \item{neighborhood}{neighborhood where murder occurred}
-  \item{ileadsaddress}{house address where murder occurred}
-  \item{ileadsstreet}{street where murer occurred}
+  \item{nhood}{neighborhood where murder occurred, see \href{https://www.stlouis-mo.gov/government/departments/planning/documents/upload/CitywideNeighborhoodMap.pdf}{for values}}
+  \item{address}{house address where murder occurred}
+  \item{street}{street where murder occurred}
   ...
 }}
 \source{
 \url{http://www.slmpd.org/Crimereports.shtml}
 }
 \usage{
-stlMurders
+data(stlMurders)
 }
 \description{
 A dataset containing murders for the years 2008 through 2016 in the City of St. Louis.
+}
+\examples{
+str(stlMurders)
+head(stlMurders)
+
+if (require("dplyr") & require("ggplot2")) {
+
+  # what is the neighborhood with the most murders?
+    stlMurders \%>\%
+      group_by(nhood) \%>\%
+      summarize(n_obs = n()) \%>\%
+      arrange(desc(n_obs))
+
+    # top neighborhoods: 50 is Wells Goodfellow and 59 is Jeff Vanderlou
+
+  # how have murders changed over time?
+    stlMurders \%>\%
+      group_by(year) \%>\%
+      summarize(n_obs = n()) \%>\%
+      arrange(year) \%>\%
+      ggplot(aes(x = year, y = n_obs)) +
+        geom_bar(stat="identity") +
+        scale_x_continuous(breaks = c(2008:2016),
+          labels = factor(2008:2016))
+
+}
+
+}
+\references{
+Asher, J. (2017, January 9). U.S. Cities Experienced Another Big Rise In Murder In 2016. \emph{FiveThiryEight}, retrived from \href{https://fivethirtyeight.com/features/u-s-cities-experienced-another-big-rise-in-murder-in-2016/}{website}.
 }
 \keyword{datasets}

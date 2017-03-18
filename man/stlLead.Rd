@@ -60,6 +60,6 @@ if (require("dplyr") & require("ggplot2")) {
 
 }
 \references{
-Pell, M.B. & Schneyer, J. (2016, December 19) Off the Charts: The thousands of U.S. locales where lead poisoning is worse than in Flint. \emph{Reuters}, retrieved from \href{http://www.reuters.com/investigates/special-report/usa-lead-testing}{article website}.
+Pell, M.B. & Schneyer, J. (2016, December 19). Off the Charts: The thousands of U.S. locales where lead poisoning is worse than in Flint. \emph{Reuters}, retrieved from \href{http://www.reuters.com/investigates/special-report/usa-lead-testing}{website}.
 }
 \keyword{datasets}
