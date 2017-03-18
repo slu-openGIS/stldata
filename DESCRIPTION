@@ -1,6 +1,6 @@
 Package: stldata
-Title: Contains data on the City of St. Louis for teaching purposes
-Version: 0.1
+Title: Contains Data on the City of St. Louis for Teaching Purposes
+Version: 0.1.0
 Author: Christopher Prener <prenercg@slu.edu>
 Maintainer: Christopher Prener <prenercg@slu.edu>
 Description: This package contains various datasets representing the City of St. Louis. 
@@ -18,5 +18,7 @@ Suggests:
 License: CC0
 Encoding: UTF-8
 LazyData: true
+URL: https://github.com/chris-prener/stldata
+BugReports: https://github.com/chris-prener/stldata/issues
 RoxygenNote: 6.0.1
 VignetteBuilder: knitr
