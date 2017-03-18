@@ -27,7 +27,7 @@
 #'   \item{povertyU18_MOE}{margin of error for \code{povertyU18}}
 #' }
 #' @source \href{http://www.reuters.com/investigates/special-report/usa-lead-testing/#interactive-lead}{Reuters reporting on lead exposure} and 2015 5-year American Community Survey estimates for City of St. Louis Census Tracts via \href{https://factfinder.census.gov}{American Fact Finder}
-#' @references Pell, M.B. & Schneyer, J. (2016, December 19) Off the Charts: The thousands of U.S. locales where lead poisoning is worse than in Flint. \emph{Reuters}, retrieved from \href{http://www.reuters.com/investigates/special-report/usa-lead-testing}{article website}.
+#' @references Pell, M.B. & Schneyer, J. (2016, December 19). Off the Charts: The thousands of U.S. locales where lead poisoning is worse than in Flint. \emph{Reuters}, retrieved from \href{http://www.reuters.com/investigates/special-report/usa-lead-testing}{website}.
 #'
 #' @examples
 #' str(stlLead)
