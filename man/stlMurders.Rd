@@ -6,7 +6,7 @@
 \title{City of St. Louis Murders, 2008-2016}
 \format{A data frame with 1394 rows and 11 variables:
 \describe{
-  \item{id}{STLMPD record number}
+  \item{id}{SLMPD record number}
   \item{fullDate}{string date in dmy format for when murder occurred}
   \item{year}{year murder occurred}
   \item{month}{month murder occurred}
@@ -18,14 +18,11 @@
   \item{address}{house address where murder occurred}
   \item{street}{street where murder occurred}
 }}
-\source{
-St. Louis Metropolitan Police Department
-}
 \usage{
 data(stlMurders)
 }
 \description{
-A dataset containing murders for the years 2008 through 2016 in the City of St. Louis.
+A data set containing murders for the years 2008 through 2016 in the City of St. Louis.
 }
 \examples{
 str(stlMurders)

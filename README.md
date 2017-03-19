@@ -13,7 +13,7 @@ Download and install latest release of `stldata` from CRAN:
 install.packages("stldata")
 ```
 
-Or download the latest build with patches and test data from GitHub:
+or download the latest build with patches and test data from GitHub:
 
 ``` r
 devtools::install_github("chris-prener/stldata")
@@ -30,4 +30,4 @@ The package currently contains two data tables:
 
 I am currently working on a set of tables with educational outcomes by school for St. Louis City Public Schools.
 
-If you have data about the City or the metro area that you would like to donoate, [open up an issue](http://github.com/chris-prener/stldata/issues) or [email Chris](mailto:prenercg@slu.edu).
+If you have data about the City or the metro area that you would like to donate or variables you'd like to see added to a table, open up an issue on the package's [GitHub page](http://github.com/chris-prener/stldata/issues).

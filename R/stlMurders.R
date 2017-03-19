@@ -1,6 +1,6 @@
 #' City of St. Louis Murders, 2008-2016
 #'
-#' A dataset containing murders for the years 2008 through 2016 in the City of St. Louis.
+#' A data set containing murders for the years 2008 through 2016 in the City of St. Louis.
 #'
 #' @docType data
 #'
@@ -8,7 +8,7 @@
 #'
 #' @format A data frame with 1394 rows and 11 variables:
 #' \describe{
-#'   \item{id}{STLMPD record number}
+#'   \item{id}{SLMPD record number}
 #'   \item{fullDate}{string date in dmy format for when murder occurred}
 #'   \item{year}{year murder occurred}
 #'   \item{month}{month murder occurred}
@@ -20,7 +20,7 @@
 #'   \item{address}{house address where murder occurred}
 #'   \item{street}{street where murder occurred}
 #' }
-#' @source \href{http://www.slmpd.org}{St. Louis Metropolitan Police Department; original data cleaning and dataset construction by Taylor Braswell
+#' @source \href{http://www.slmpd.org}{St. Louis Metropolitan Police Department; original data cleaning and data set construction by Taylor Braswell
 #' @references Asher, J. (2017, January 9). U.S. Cities Experienced Another Big Rise In Murder In 2016. \emph{FiveThiryEight}, retrived from \href{https://fivethirtyeight.com/features/u-s-cities-experienced-another-big-rise-in-murder-in-2016/}{website}.
 #'
 #' @examples
