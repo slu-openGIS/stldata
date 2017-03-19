@@ -23,7 +23,7 @@
   \item{povertyU18_MOE}{margin of error for \code{povertyU18}}
 }}
 \source{
-\href{http://www.reuters.com/investigates/special-report/usa-lead-testing/#interactive-lead}{Reuters reporting on lead exposure} and 2015 5-year American Community Survey estimates for City of St. Louis Census Tracts via \href{https://factfinder.census.gov}{American Fact Finder}
+\href{http://www.reuters.com/investigates/special-report/usa-lead-testing/#interactive-lead}{Reuters reporting on lead exposure} and 2015 5-year American Community Survey estimates for City of St. Louis Census Tracts via \href{https://factfinder.census.gov/faces/nav/jsf/pages/index.xhtml}{American Fact Finder}
 }
 \usage{
 data(stlLead)
