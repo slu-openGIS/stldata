@@ -24,7 +24,7 @@ devtools::install_github("chris-prener/stldata")
 The package currently contains two data tables:
 
 -   `stlLead` - blood lead level test result datavi from 2010-2015 via [Reuters](http://www.reuters.com/investigates/special-report/usa-lead-testing/#interactive-lead) and 2015 5-year estimates for demographics (poverty and race) via the [American Community Survey](https://factfinder.census.gov/faces/nav/jsf/pages/index.xhtml)
--   `stlMurders` - all murders between 2008 and 2016 via the [St. Louis Metropolitan Police Department](http://www.slmpd.org/)
+-   `stlMurders` - all murders between 2008 and 2016 via the St. Louis Metropolitan Police Department
 
 ### Future Data
 
