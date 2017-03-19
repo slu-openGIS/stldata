@@ -19,7 +19,7 @@
   \item{street}{street where murder occurred}
 }}
 \source{
-St. Louis Metropolitan Police Department; original data cleaning and data set construction by Taylor Braswell
+St. Louis Metropolitan Police Department; original data cleaning and data set construction by \href{https://github.com/thbraswell}{Taylor Braswell}
 }
 \usage{
 data(stlMurders)

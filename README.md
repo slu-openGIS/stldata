@@ -13,7 +13,7 @@ Download and install latest release of `stldata` from CRAN:
 install.packages("stldata")
 ```
 
-or download the latest build with patches and test data from GitHub:
+or download the latest build with patches and test data from GitHub using the `devtools` package:
 
 ``` r
 devtools::install_github("chris-prener/stldata")
@@ -23,8 +23,22 @@ devtools::install_github("chris-prener/stldata")
 
 The package currently contains two data tables:
 
--   `stlLead` - blood lead level test result datavi from 2010-2015 via [Reuters](http://www.reuters.com/investigates/special-report/usa-lead-testing/#interactive-lead) and 2015 5-year estimates for demographics (poverty and race) via the [American Community Survey](https://factfinder.census.gov/faces/nav/jsf/pages/index.xhtml)
+-   `stlLead` - blood lead level test result datavi from 2010-2015 via [Reuters](http://www.reuters.com/investigates/special-report/usa-lead-testing/#interactive-lead) and 2015 5-year estimates for demographics (poverty and race) via the American Community Survey
 -   `stlMurders` - all murders between 2008 and 2016 via the St. Louis Metropolitan Police Department
+
+Opening data:
+
+``` r
+library("stldata")
+lead <- stlLead
+murders <- stlMurders
+```
+
+Additional examples are available in each table's help file:
+
+``` r
+?stlLead
+```
 
 ### Future Data
 
