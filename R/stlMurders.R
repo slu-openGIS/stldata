@@ -21,7 +21,7 @@
 #'   \item{street}{street where murder occurred}
 #' }
 #'
-#' @source \href{http://www.slmpd.org}{St. Louis Metropolitan Police Department; original data cleaning and data set construction by Taylor Braswell
+#' @source \href{http://www.slmpd.org}{St. Louis Metropolitan Police Department}; original data cleaning and data set construction by Taylor Braswell
 #'
 #' @references Asher, J. (2017, January 9). U.S. Cities Experienced Another Big Rise In Murder In 2016. \emph{FiveThiryEight}, retrived from \href{https://fivethirtyeight.com/features/u-s-cities-experienced-another-big-rise-in-murder-in-2016/}{website}.
 #'

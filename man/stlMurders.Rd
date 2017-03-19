@@ -18,6 +18,9 @@
   \item{address}{house address where murder occurred}
   \item{street}{street where murder occurred}
 }}
+\source{
+\href{http://www.slmpd.org}{St. Louis Metropolitan Police Department}; original data cleaning and data set construction by Taylor Braswell
+}
 \usage{
 data(stlMurders)
 }
