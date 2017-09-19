@@ -29,7 +29,7 @@
 data(stlLead)
 }
 \description{
-A data set containing blood lead test results as well as race and poverty date for
+A data set containing blood lead test results as well as race and poverty data for
 the City of St. Louis by Census Tract. All demographic data are from the 2015 5-year
 American Community Survey estimates for St. Louis Census Tracts.
 }
