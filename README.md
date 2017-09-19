@@ -16,7 +16,8 @@ library(devtools)
 devtools::install_github("chris-prener/stlData")
 ```
 
-### Current Data
+Current Data
+------------
 
 The package currently contains two data tables:
 
@@ -37,8 +38,14 @@ Additional examples are available in each table's help file:
 ?stlLead
 ```
 
-### Future Data
+Future Data
+-----------
 
 I am currently working on a set of tables with educational outcomes by school for St. Louis City Public Schools.
 
 If you have data about the City or the metro area that you would like to donate or variables you'd like to see added to a table, open up an issue on the package's [GitHub page](http://github.com/chris-prener/stlData/issues).
+
+Contributor Code of Conduct
+---------------------------
+
+Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.
