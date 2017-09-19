@@ -12,7 +12,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# `stldata`
+# `stldata` <img src="man/figures/logo.png" align="right" />
 
 The `stldata` package contains various datasets representing the City of St. Louis. These datasets are primary designed for teaching statistics, data science, and spatial data analysis using `R`.
 
