@@ -35,21 +35,19 @@ The package currently contains two data tables:
 *   `stlMurders` - all murders between 2008 and 2016 via the St. Louis Metropolitan Police Department
 *   `stlSmoking` - current smoking in 2014 by census tract  via [Centers for Disease Control 500 Cities Project](https://www.cdc.gov/500cities/)
 
-Opening data:
+## Useage
+Once loaded, the data contained in testDriveR can be loaded into data frames in your global environment and then explored. For example, to load the `asthma` data:
 
 ```r
 library("stlData")
 asthma <- stlAsthma
-noIns <- stlInsurance
-lead <- stlLead
-murders <- stlMurders
-smokers <- stlSmoking
+str(asthma)
 ```
 
-Additional examples are available in each table's help file. For example:
+Additional examples and information are available in each table's help file. For example:
 
 ```r
-?stlLead
+?stlAsthma
 ```
 
 ## Future Data
