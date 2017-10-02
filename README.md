@@ -3,6 +3,8 @@
 stlData <img src="man/figures/logo.png" align="right" />
 ========================================================
 
+[![Travis-CI Build Status](https://travis-ci.org/chris-prener/stlData.svg?branch=master)](https://travis-ci.org/chris-prener/stlData)
+
 The `stlData` package contains various datasets representing the City of St. Louis. These datasets are primary designed for teaching statistics, data science, and spatial data analysis using `R`.
 
 Installation
