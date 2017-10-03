@@ -3,14 +3,14 @@
 stlData <img src="man/figures/logo.png" align="right" />
 ========================================================
 
-[![Travis-CI Build Status](https://travis-ci.org/chris-prener/stlData.svg?branch=master)](https://travis-ci.org/chris-prener/stlData) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/chris-prener/stlData?branch=master&svg=true)](https://ci.appveyor.com/project/chris-prener/stlData) [![DOI](https://zenodo.org/badge/85344799.svg)](https://zenodo.org/badge/latestdoi/85344799)
+[![Travis-CI Build Status](https://travis-ci.org/chris-prener/stlData.svg?branch=master)](https://travis-ci.org/chris-prener/stlData) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/chris-prener/stlData?branch=master&svg=true)](https://ci.appveyor.com/project/chris-prener/stlData) [![DOI](https://zenodo.org/badge/85344799.svg)](https://zenodo.org/badge/latestdoi/85344799) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/stlData)](https://cran.r-project.org/package=stlData)
 
 The `stlData` package contains various datasets representing the City of St. Louis. These datasets are primary designed for teaching statistics, data science, and spatial data analysis using `R`.
 
 Installation
 ------------
 
-You can install stlData from [Github](https://github.com/chris-prener/stlData) with:
+You can install `stlData` from [Github](https://github.com/chris-prener/stlData) with:
 
 ``` r
 # install.packages("devtools")
@@ -32,7 +32,7 @@ The package currently contains two data tables:
 Useage
 ------
 
-Once loaded, the data contained in testDriveR can be loaded into data frames in your global environment and then explored. For example, to load the `asthma` data:
+Once the package is loaded, the data contained in `stlData` can be assigned to data frames in your global environment and then explored. For example, to load the `stlAsthma` data:
 
 ``` r
 library("stlData")
