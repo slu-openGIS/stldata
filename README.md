@@ -24,6 +24,7 @@ Current Data
 The package currently contains two data tables:
 
 -   `stlAsmtha` - current asthma prevalence in 2014 by census tract via [Centers for Disease Control 500 Cities Project](https://www.cdc.gov/500cities/)
+-   `stlIncome` - 2010 and 2015 median income estimates via the American Community Survey, by census tract
 -   `stlInsurance` - lack of health insurance in 2014 by census tract via [Centers for Disease Control 500 Cities Project](https://www.cdc.gov/500cities/)
 -   `stlLead` - blood lead level test result data from 2010-2015 via [Reuters](http://www.reuters.com/investigates/special-report/usa-lead-testing/#interactive-lead) and 2015 5-year estimates for demographics (poverty and race) via the American Community Survey, by census tract
 -   `stlMurders` - all murders between 2008 and 2016 via the St. Louis Metropolitan Police Department
