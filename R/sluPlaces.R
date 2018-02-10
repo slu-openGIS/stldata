@@ -15,7 +15,7 @@
 #'   }
 #'
 #'
-#' #' @examples
+#' @examples
 #' str(sluPlaces)
 #' head(sluPlaces)
 #'
