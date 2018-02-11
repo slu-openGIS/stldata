@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • stlData</title>
+<title>Campus Locations at Saint Louis University — sluPlaces • stlData</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -37,7 +37,7 @@
   </head>
 
   <body>
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -78,106 +78,50 @@
       </header>
 
       <div class="row">
-  <div class="col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>
-        Reference
-        <small>version&nbsp;1.3.0</small>
-      </h1>
+    <h1>Campus Locations at Saint Louis University</h1>
     </div>
 
-    <div class="contents">
-      <table class="ref-index">
+    
+    <p>A simple data set containing a few locations on SLU's North Campus.</p>
+    
 
-      <colgroup>
-        <col class="alias" />
-        <col class="title" />
-      </colgroup>
+    <pre class="usage"><span class='fu'>data</span>(<span class='no'>sluPlaces</span>)</pre>
+        
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-      <tbody>
-        <tr>
-          <th colspan="2">
-            <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-            <p class="section-desc"></p>
-          </th>
-        </tr>
-        <tr>
-          <!--  -->
-          <td>
-            <p><code><a href="sluPlaces.html">data</a></code> </p>
-          </td>
-          <td><p>Campus Locations at Saint Louis University</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="stlAsthma.html">data</a></code> </p>
-          </td>
-          <td><p>Crude Prevalance of Current Asthma, 2014</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="stlBoundary.html">data</a></code> </p>
-          </td>
-          <td><p>City of St. Louis Boundary</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="stlData.html">stlData</a></code> </p>
-          </td>
-          <td><p>City of St. Louis Data</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="stlHistoric.html">data</a></code> </p>
-          </td>
-          <td><p>Historic Districts in the City of St. Louis</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="stlHydro.html">data</a></code> </p>
-          </td>
-          <td><p>Major Bodies of Water in the City of St. Louis</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="stlIncome.html">data</a></code> </p>
-          </td>
-          <td><p>Median Income by Census Tract, 2010 and 2015</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="stlInsurance.html">data</a></code> </p>
-          </td>
-          <td><p>Crude Prevalance of No Health Insurance, 2014</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="stlLead.html">data</a></code> </p>
-          </td>
-          <td><p>Blood Lead Test Results in the City of St. Louis, 2010-2015</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="stlMurders.html">data</a></code> </p>
-          </td>
-          <td><p>City of St. Louis Murders, 2008-2016</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="stlSmoking.html">data</a></code> </p>
-          </td>
-          <td><p>Crude Prevalance of Current Smoking, 2014</p></td>
-        </tr>
-      </tbody>
-      </table>
-    </div>
+    <p>A data frame with 106 rows and 7 variables:</p><dl class='dl-horizontal'>
+  <dt>id</dt><dd><p>record id number</p></dd>
+  <dt>name</dt><dd><p>location name</p></dd>
+  <dt>lng</dt><dd><p>longitude (decimal degrees)</p></dd>
+  <dt>lat</dt><dd><p>latitude (decimal degrees)</p></dd>
+  </dl>
+    
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='fu'>str</span>(<span class='no'>sluPlaces</span>)</div><div class='output co'>#&gt; 'data.frame':	6 obs. of  4 variables:
+#&gt;  $ id  : num  1 2 3 4 5 6
+#&gt;  $ name: chr  "Morrissey Hall" "Starbucks" "Simon Rec" "Pius Library" ...
+#&gt;  $ lng : num  -90.2 -90.2 -90.2 -90.2 -90.2 ...
+#&gt;  $ lat : num  38.6 38.6 38.6 38.6 38.6 ...</div><div class='input'><span class='fu'>head</span>(<span class='no'>sluPlaces</span>)</div><div class='output co'>#&gt;   id           name       lng      lat
+#&gt; 1  1 Morrissey Hall -90.23710 38.63755
+#&gt; 2  2      Starbucks -90.23484 38.63596
+#&gt; 3  3      Simon Rec -90.23584 38.63528
+#&gt; 4  4   Pius Library -90.23497 38.63674
+#&gt; 5  5            BSC -90.23296 38.63497
+#&gt; 6  6       The Pond -90.23631 38.63690</div><div class='input'>
+</div></pre>
   </div>
-
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#section-all-functions">All functions</a></li>
+      
+      <li><a href="#format">Format</a></li>
+      
+      <li><a href="#examples">Examples</a></li>
     </ul>
+
   </div>
 </div>
 
