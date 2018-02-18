@@ -39,14 +39,14 @@
 #' if (require("dplyr") & require("ggplot2")) {
 #'
 #'   # what is the relationship between race and lead test results?
-#'     stlLead %>%
+#'     stl_tbl_lead %>%
 #'       mutate(propBlack = black / totalPop) %>%
 #'       ggplot(aes(x = pctElevated, y = propBlack)) +
 #'         geom_point() +
 #'         geom_smooth()
 #'
 #'   # relationship between poverty and lead test results?
-#'     stlLead %>%
+#'     stl_tbl_lead %>%
 #'       mutate(propPvty = povertyTot / totalPop) %>%
 #'       ggplot(aes(x = pctElevated, y = propPvty)) +
 #'         geom_point(method=lm) +
