@@ -4,9 +4,9 @@
 #'
 #' @docType data
 #'
-#' @usage data(stlMurders)
+#' @usage data(stl_tbl_murders)
 #'
-#' @format A data frame with 1394 rows and 11 variables:
+#' @format A tibble with 1394 rows and 11 variables:
 #' \describe{
 #'   \item{id}{SLMPD record number}
 #'   \item{fullDate}{string date in dmy format for when murder occurred}
@@ -26,13 +26,13 @@
 #' @references Asher, J. (2017, January 9). U.S. Cities Experienced Another Big Rise In Murder In 2016. \emph{FiveThiryEight}, retrived from \href{https://fivethirtyeight.com/features/u-s-cities-experienced-another-big-rise-in-murder-in-2016/}{website}.
 #'
 #' @examples
-#' str(stlMurders)
-#' head(stlMurders)
+#' str(stl_tbl_murders)
+#' head(stl_tbl_murders)
 #'
 #' if (require("dplyr") & require("ggplot2")) {
 #'
 #'   # what is the neighborhood with the most murders?
-#'     stlMurders %>%
+#'     stl_tbl_murders %>%
 #'       group_by(nhood) %>%
 #'       summarize(n_obs = n()) %>%
 #'       arrange(desc(n_obs))
@@ -40,7 +40,7 @@
 #'     # top neighborhoods: 50 is Wells Goodfellow and 59 is Jeff Vanderlou
 #'
 #'   # how have murders changed over time?
-#'     stlMurders %>%
+#'     stl_tbl_murders %>%
 #'       group_by(year) %>%
 #'       summarize(n_obs = n()) %>%
 #'       arrange(year) %>%
@@ -51,4 +51,4 @@
 #'
 #' }
 #'
-"stlMurders"
+"stl_tbl_murders"
