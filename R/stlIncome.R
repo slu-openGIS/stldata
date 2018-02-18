@@ -4,9 +4,9 @@
 #'
 #' @docType data
 #'
-#' @usage data(stlIncome)
+#' @usage data(stl_tbl_income)
 #'
-#' @format A data frame with 106 rows and 8 variables:
+#' @format A tibble with 106 rows and 8 variables:
 #' \describe{
 #'   \item{geoID}{full census tract id number}
 #'   \item{tractCE}{census tract id number}
@@ -20,9 +20,9 @@
 #'
 #' @source \href{https://www.census.gov}{U.S. Census Bureau}
 #'
-#' #' @examples
-#' str(stlIncome)
-#' head(stlIncome)
-#' summary(stlIncome$mi10_inflate)
+#' @examples
+#' str(stl_tbl_income)
+#' head(stl_tbl_income)
+#' summary(stl_tbl_income$mi10_inflate)
 #'
-"stlIncome"
+"stl_tbl_income"
