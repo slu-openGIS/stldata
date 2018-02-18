@@ -4,22 +4,21 @@
 #'
 #' @docType data
 #'
-#' @usage data(stlBoundary)
+#' @usage data(stl_sf_boundary)
 #'
 #' @format A simple feature with 1 rows and 6 variables:
 #' \describe{
-#'   \item{LAYER}{polygon description}
-#'   \item{AREA_SQMI}{square mileage of city}
-#'   \item{Name}{polygon name}
-#'   \item{Shape_Leng}{length of polygon}
-#'   \item{Shape_Area}{area of polygon}
+#'   \item{GEOID}{county FIPS code}
+#'   \item{NAME}{polygon name}
+#'   \item{LAND_SQMI}{land area of city, square miles}
+#'   \item{WATER_SQMI}{water area of city, square miles}
 #'   \item{geometry}{simple features geometry}
 #'   }
 #'
 #'
 #' @examples
-#' class(stlBoundary)
-#' str(stlBoundary)
-#' head(stlBoundary)
+#' class(stl_sf_boundary)
+#' str(stl_sf_boundary)
+#' head(stl_sf_boundary)
 #'
-"stlBoundary"
+"stl_sf_boundary"
