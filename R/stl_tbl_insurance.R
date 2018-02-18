@@ -4,9 +4,9 @@
 #'
 #' @docType data
 #'
-#' @usage data(stlInsurance)
+#' @usage data(stl_tbl_insurance)
 #'
-#' @format A data frame with 106 rows and 7 variables:
+#' @format A tibble with 106 rows and 6 variables:
 #' \describe{
 #'   \item{geoID}{full census tract id number}
 #'   \item{tractCE}{census tract id number}
@@ -19,8 +19,8 @@
 #' @source \href{https://www.cdc.gov/500cities/}{Centers for Disease Control 500 Cities Project}
 #'
 #' #' @examples
-#' str(stlInsurance)
-#' head(stlInsurance)
-#' summary(stlInsurance$pctUnins)
+#' str(stl_tbl_insurance)
+#' head(stl_tbl_insurance)
+#' summary(stl_tbl_insurance$pctUnins)
 #'
-"stlInsurance"
+"stl_tbl_insurance"
