@@ -6,7 +6,7 @@
 #'
 #' @usage data(stl_tbl_sluPlaces)
 #'
-#' @format A data frame with 106 rows and 7 variables:
+#' @format A tibble with 6 rows and 4 variables:
 #' \describe{
 #'   \item{id}{record id number}
 #'   \item{name}{location name}

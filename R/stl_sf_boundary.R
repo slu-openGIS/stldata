@@ -6,7 +6,7 @@
 #'
 #' @usage data(stl_sf_boundary)
 #'
-#' @format A simple feature with 1 rows and 6 variables:
+#' @format A simple feature with 1 rows and 5 variables:
 #' \describe{
 #'   \item{GEOID}{county FIPS code}
 #'   \item{NAME}{polygon name}

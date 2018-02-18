@@ -6,7 +6,7 @@
 #'
 #' @usage data(stl_tbl_asthma)
 #'
-#' @format A data frame with 106 rows and 7 variables:
+#' @format A tibble with 106 rows and 6 variables:
 #' \describe{
 #'   \item{geoID}{full census tract id number}
 #'   \item{tractCE}{census tract id number}
