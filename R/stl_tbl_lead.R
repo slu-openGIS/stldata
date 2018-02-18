@@ -6,9 +6,9 @@
 #'
 #' @docType data
 #'
-#' @usage data(stlLead)
+#' @usage data(stl_tbl_lead)
 #'
-#' @format A data frame with 106 rows and 15 variables:
+#' @format A tibble with 106 rows and 15 variables:
 #' \describe{
 #'   \item{geoID}{full census tract id number}
 #'   \item{tractCE}{census tract id number}
@@ -30,11 +30,11 @@
 #' @references Pell, M.B. & Schneyer, J. (2016, December 19). Off the Charts: The thousands of U.S. locales where lead poisoning is worse than in Flint. \emph{Reuters}, retrieved from \href{http://www.reuters.com/investigates/special-report/usa-lead-testing}{website}.
 #'
 #' @examples
-#' str(stlLead)
-#' head(stlLead)
-#' summary(stlLead$pctElevated)
-#' summary(stlLead$black)
-#' summary(stlLead$povertyTot)
+#' str(stl_tbl_lead)
+#' head(stl_tbl_lead)
+#' summary(stl_tbl_lead$pctElevated)
+#' summary(stl_tbl_lead$black)
+#' summary(stl_tbl_lead$povertyTot)
 #'
 #' if (require("dplyr") & require("ggplot2")) {
 #'
@@ -54,4 +54,4 @@
 #'
 #' }
 #'
-"stlLead"
+"stl_tbl_lead"
