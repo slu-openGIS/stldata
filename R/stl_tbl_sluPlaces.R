@@ -4,7 +4,7 @@
 #'
 #' @docType data
 #'
-#' @usage data(sluPlaces)
+#' @usage data(stl_tbl_sluPlaces)
 #'
 #' @format A data frame with 106 rows and 7 variables:
 #' \describe{
@@ -16,7 +16,7 @@
 #'
 #'
 #' @examples
-#' str(sluPlaces)
-#' head(sluPlaces)
+#' str(stl_tbl_sluPlaces)
+#' head(stl_tbl_sluPlaces)
 #'
-"sluPlaces"
+"stl_tbl_sluPlaces"
