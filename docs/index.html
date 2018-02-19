@@ -70,7 +70,7 @@
 <a href="#stldata" class="anchor"></a>stlData <img src="reference/figures/logo.png" align="right">
 </h1></div>
 
-<p>The <code>stlData</code> package contains various datasets representing the City of St. Louis. These datasets are primary designed for teaching statistics, data science, and spatial data analysis using <code>R</code>.</p>
+<p>The <code>stlData</code> package contains various data sets representing the City of St. Louis. These data sets are primary designed for teaching statistics, data science, and spatial data analysis using <code>R</code>.</p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
@@ -83,7 +83,7 @@
 <div id="simple-features" class="section level3">
 <h3 class="hasAnchor">
 <a href="#simple-features" class="anchor"></a>Simple Features</h3>
-<p>One gaol of <code>stlData</code> is to provide accessible data for learning how to manipulate and map simple features objects in <code>R</code>. The package contains four <code>sf</code> objects describing the City of St. Louis:</p>
+<p>One goal of <code>stlData</code> is to provide accessible data for learning how to manipulate and map simple features objects in <code>R</code>. The package contains four <code>sf</code> objects describing the City of St. Louis:</p>
 <ul>
 <li>
 <code>stl_sf_boundary</code> - city boundary</li>
@@ -98,7 +98,7 @@
 <div id="data-tables" class="section level3">
 <h3 class="hasAnchor">
 <a href="#data-tables" class="anchor"></a>Data Tables</h3>
-<p>The package currently contains eight data tables stored as tibbles with quanitative data about the city:</p>
+<p>The package currently contains eight data tables stored as tibbles with quantitative data about the city:</p>
 <ul>
 <li>
 <code>stl_tbl_asthma</code> - current asthma prevalence in 2014 by census tract via <a href="https://www.cdc.gov/500cities/">Centers for Disease Control 500 Cities Project</a>
@@ -113,8 +113,7 @@
 <li>
 <code>stl_tbl_murders</code> - all murders between 2008 and 2016 via the St. Louis Metropolitan Police Department</li>
 <li>
-<code>stl_tbl_sluPlaces</code> - a small number of locations at Saint Louis University, suitable for learning <code>leaflet</code>
-</li>
+<code>stl_tbl_sluPlaces</code> - a small number of locations at Saint Louis University</li>
 <li>
 <code>stl_tbl_smoking</code> - current smoking in 2014 by census tract via <a href="https://www.cdc.gov/500cities/">Centers for Disease Control 500 Cities Project</a>
 </li>
@@ -144,12 +143,17 @@
 <div id="basic-usage" class="section level3">
 <h3 class="hasAnchor">
 <a href="#basic-usage" class="anchor"></a>Basic Usage</h3>
-<p>Once the package is loaded, the data contained in <code>stlData</code> can be assigned to data frames in your global environment and then explored. For example, to load the <code>stlAsthma</code> data:</p>
+<p>Once the package is loaded, the data contained in <code>stlData</code> can be assigned to data frames in your global environment and then explored. For example, to load the <code>stl_tbl_asthma</code> data:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(<span class="st">"stlData"</span>)
 asthma &lt;-<span class="st"> </span>stl_tbl_asthma
 <span class="kw">str</span>(asthma)</code></pre></div>
 <p>Additional examples and information are available in each table’s help file. For example:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><a href="reference/stl_tbl_asthma.html">?stl_tbl_asthma</a></code></pre></div>
+</div>
+<div id="skill-building" class="section level3">
+<h3 class="hasAnchor">
+<a href="#skill-building" class="anchor"></a>Skill Building</h3>
+<p>The <code>stl_tbl_murders</code> and <code>stl_tbl_water</code> data have been created for practicing data wrangling. The murder data can be used for working with demographic data specifically, and the water data have both missing and duplicate information. The <code>stl_tbl_sluPlaces</code> table is meant for introducing basic mapping wither either <code>plot()</code>, <code>ggplot2</code>, or <code>leaflet</code>. All of the tables excepting <code>stl_tbl_sluPlaces</code> contain count or rate data suitable for plotting, and the data measured at the census tract level can be use for practicing joins with demographic data from <code>tidycensus</code>.</p>
 </div>
 <div id="mapping-with-sf" class="section level3">
 <h3 class="hasAnchor">
@@ -168,7 +172,7 @@ asthma &lt;-<span class="st"> </span>stl_tbl_asthma
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">asthma &lt;-<span class="st"> </span><span class="kw"><a href="reference/stl_as_sf.html">stl_as_sf</a></span>(stl_tbl_asthma)
 
 <span class="kw">ggplot</span>() <span class="op">+</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">geom_sf</span>(<span class="dt">data =</span> stl_sf_asthma, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">fill =</span> pctAsthma), <span class="dt">color =</span> <span class="st">"#5d5d5d"</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_sf</span>(<span class="dt">data =</span> asthma, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">fill =</span> pctAsthma), <span class="dt">color =</span> <span class="st">"#5d5d5d"</span>) <span class="op">+</span>
 <span class="st">  </span><span class="kw">scale_fill_viridis</span>(<span class="dt">name =</span> <span class="st">"Percent"</span>) <span class="op">+</span>
 <span class="st">  </span><span class="kw">labs</span>(<span class="dt">title =</span> <span class="st">"Crude Asthma Prevalence"</span>, <span class="dt">subtitle =</span> <span class="st">"St. Louis, MO"</span>)</code></pre></div>
 <div class="figure">
@@ -204,6 +208,7 @@ asthma &lt;-<span class="st"> </span>stl_tbl_asthma
 <ul class="list-unstyled">
 <li><a href="https://travis-ci.org/chris-prener/stlData"><img src="https://travis-ci.org/chris-prener/stlData.svg?branch=master" alt="Travis-CI Build Status"></a></li>
 <li><a href="https://ci.appveyor.com/project/chris-prener/stlData"><img src="https://ci.appveyor.com/api/projects/status/github/chris-prener/stlData?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></li>
+<li><a href="https://codecov.io/github/chris-prener/stlData?branch=master"><img src="https://img.shields.io/codecov/c/github/chris-prener/stlData/master.svg" alt="Coverage Status"></a></li>
 <li><a href="https://zenodo.org/badge/latestdoi/85344799"><img src="https://zenodo.org/badge/85344799.svg" alt="DOI"></a></li>
 <li><a href="https://cran.r-project.org/package=stlData"><img src="http://www.r-pkg.org/badges/version/stlData" alt="CRAN_Status_Badge"></a></li>
 </ul>
