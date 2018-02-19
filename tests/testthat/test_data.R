@@ -12,4 +12,5 @@ test_that("data objects are unchanged", {
   expect_equal_to_reference(stl_tbl_murders, "data/stl_tbl_murders.rds")
   expect_equal_to_reference(stl_tbl_sluPlaces, "data/stl_tbl_sluPlaces.rds")
   expect_equal_to_reference(stl_tbl_smoking, "data/stl_tbl_smoking.rds")
+  expect_equal_to_reference(stl_tbl_water, "data/stl_tbl_water.rds")
 })
