@@ -26,40 +26,79 @@ The `stlData` package contains various datasets representing the City of St. Lou
 You can install `stlData` from [Github](https://github.com/chris-prener/stlData) with:
 
 ```{r gh-installation, eval = FALSE}
-# install.packages("devtools")
-library(devtools)
 devtools::install_github("chris-prener/stlData")
 ```
 
 ## Current Data
-The package currently contains two data tables:
+### Simple Features
+One gaol of `stlData` is to provide accessible data for learning how to manipulate and map simple features objects in `R`. The package contains four `sf` objects describing the City of St. Louis:
 
-*   `stlAsmtha` - current asthma prevalence in 2014 by census tract via [Centers for Disease Control 500 Cities Project](https://www.cdc.gov/500cities/)
-*   `stlIncome` - 2010 and 2015 median income estimates via the American Community Survey, by census tract
-*   `stlInsurance` - lack of health insurance in 2014 by census tract  via [Centers for Disease Control 500 Cities Project](https://www.cdc.gov/500cities/)
-*   `stlLead` - blood lead level test result data from 2010-2015 via [Reuters](http://www.reuters.com/investigates/special-report/usa-lead-testing/#interactive-lead) and 2015 5-year estimates for demographics (poverty and race) via the American Community Survey,  by census tract
-*   `stlMurders` - all murders between 2008 and 2016 via the St. Louis Metropolitan Police Department
-*   `stlSmoking` - current smoking in 2014 by census tract  via [Centers for Disease Control 500 Cities Project](https://www.cdc.gov/500cities/)
+*   `stl_sf_boundary` - city boundary
+*   `stl_sf_historic` - historic districts
+*   `stl_sf_hydro` - Missouri side of the Mississippi River and the River Des Peres
+*   `stl_sf_tracts` - 2016 census tracts
+
+### Data Tables
+The package currently contains seven data tables stored as tibbles with quanitative data about the city:
+
+*   `stl_tbl_asthma` - current asthma prevalence in 2014 by census tract via [Centers for Disease Control 500 Cities Project](https://www.cdc.gov/500cities/)
+*   `stl_tbl_income` - 2010 and 2015 median income estimates via the American Community Survey, by census tract
+*   `stl_tbl_insurance` - lack of health insurance in 2014 by census tract  via [Centers for Disease Control 500 Cities Project](https://www.cdc.gov/500cities/)
+*   `stl_tbl_lead` - blood lead level test result data from 2010-2015 via [Reuters](http://www.reuters.com/investigates/special-report/usa-lead-testing/#interactive-lead) and 2015 5-year estimates for demographics (poverty and race) via the American Community Survey,  by census tract
+*   `stl_tbl_murders` - all murders between 2008 and 2016 via the St. Louis Metropolitan Police Department
+*   `stl_tbl_sluPlaces` - a small number of locations at Saint Louis University, suitable for learning `leaflet`
+*   `stl_tbl_smoking` - current smoking in 2014 by census tract  via [Centers for Disease Control 500 Cities Project](https://www.cdc.gov/500cities/)
+
+### Conversion of Tibbles to `sf` Objects
+The following tibbles can be converted to `sf` objects using the `stl_as_sf()` function:
+
+*   `stl_tbl_asthma`
+*   `stl_tbl_income`
+*   `stl_tbl_insurance`
+*   `stl_tbl_lead`
+*   `stl_tbl_smoking`
+
+Input tables should not be quoted when the `stl_as_sf()` function is used:
+
+```r
+asthma <- stl_as_sf(stl_tbl_asthma)
+```
 
 ## Useage
+### Basic Usage
 Once the package is loaded, the data contained in `stlData` can be assigned to data frames in your global environment and then explored. For example, to load the `stlAsthma` data:
 
 ```r
 library("stlData")
-asthma <- stlAsthma
+asthma <- stl_tbl_asthma
 str(asthma)
 ```
 
 Additional examples and information are available in each table's help file. For example:
 
 ```r
-?stlAsthma
+?stl_tbl_asthma
 ```
 
-## Future Data
-I am currently working on a set of tables with educational outcomes by school for St. Louis City Public Schools. 
+### Mapping with `sf`
+If you have the [development version of `ggplot2`](https://github.com/tidyverse/ggplot2), the `sf` objects in the package can be mapped using the `geom_sf()` function:
 
-If you have data about the City or the metro area that you would like to donate or variables you'd like to see added to a table, open up an issue on the package's [GitHub page](http://github.com/chris-prener/stlData/issues).
+```r
+ggplot() + 
+  geom_sf(data = stl_sf_boundary, fill = "#5d5d5d", color = "#5d5d5d") +
+  geom_sf(data = stl_sf_historic, fill = "#d48a72", color = "#d48a72") +
+  geom_sf(data = stl_sf_hydro, fill = "#72bcd4", color = "#72bcd4")
+```
+![](man/figures/refMap.png)
+
+```r
+asthma <- stl_as_sf(stl_tbl_asthma)
+
+ggplot() + 
+  geom_sf(data = stl_sf_asthma, mapping = aes(fill = pctAsthma), color = "#5d5d5d") +
+  scale_fill_viridis()
+```
+![](man/figures/asthmaMap.png)
 
 ## Contributor Code of Conduct
 Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.
