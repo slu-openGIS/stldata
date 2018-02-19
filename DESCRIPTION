@@ -17,4 +17,5 @@ BugReports: https://github.com/chris-prener/stlData/issues
 RoxygenNote: 6.0.1
 Imports: tibble,
     sf,
-    dplyr
+    dplyr,
+    rlang
