@@ -6,7 +6,7 @@
 #' @details This function currently works with the tibbles that contain census tract level data:
 #'     stl_tbl_asthma, stl_tbl_income, stl_tbl_insurance, stl_tbl_lead, and stl_tbl_smoking
 #'
-#' @param table One of the accepted tables
+#' @param table Unquoted name of one of the accepted tables
 #'
 #' @return A simple features object with the specified tibble joined to the appropriate geometry.
 #'
