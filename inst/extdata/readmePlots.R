@@ -17,7 +17,7 @@ asthma <- stl_as_sf(stl_tbl_asthma)
 
 ggplot() +
   geom_sf(data = asthma, mapping = aes(fill = pctAsthma), color = "#5d5d5d") +
-  scale_fill_viridis() +
+  scale_fill_viridis(name = "Percent") +
   labs(
     title = "Crude Asthma Prevalence",
     subtitle = "St. Louis, MO"

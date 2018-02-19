@@ -87,16 +87,20 @@ If you have the [development version of `ggplot2`](https://github.com/tidyverse/
 ggplot() + 
   geom_sf(data = stl_sf_boundary, fill = "#5d5d5d", color = "#5d5d5d") +
   geom_sf(data = stl_sf_historic, fill = "#d48a72", color = "#d48a72") +
-  geom_sf(data = stl_sf_hydro, fill = "#72bcd4", color = "#72bcd4")
+  geom_sf(data = stl_sf_hydro, fill = "#72bcd4", color = "#72bcd4")  +
+  labs(title = "Historic Districts", subtitle = "St. Louis, MO")
 ```
 ![](man/figures/refMap.png)
+
+When the tibbles like `stl_tbl_asthma` are converted to `sf` objects, they can be mapped as well:
 
 ```r
 asthma <- stl_as_sf(stl_tbl_asthma)
 
 ggplot() + 
   geom_sf(data = stl_sf_asthma, mapping = aes(fill = pctAsthma), color = "#5d5d5d") +
-  scale_fill_viridis()
+  scale_fill_viridis(name = "Percent") +
+  labs(title = "Crude Asthma Prevalence", subtitle = "St. Louis, MO")
 ```
 ![](man/figures/asthmaMap.png)
 
