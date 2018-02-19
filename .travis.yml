@@ -7,7 +7,26 @@ cache: packages
 r:
   - oldrel
   - release
+  - devel
 
 os:
   - linux
   - osx
+
+matrix:
+  fast_finish: true
+  allow_failures:
+    - r: devel
+      os: osx
+
+    - r: oldrel
+      os: linux
+
+    - r: release
+      os: linux
+
+    - r: devel
+      os: linux
+
+after_success:
+  - Rscript -e 'covr::codecov()'

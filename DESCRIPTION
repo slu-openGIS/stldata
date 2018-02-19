@@ -8,7 +8,8 @@ Description: Contains a number of data sets representing various phenomena in th
     spatial data analysis using R.
 Depends: R (>= 3.3.3)
 Suggests: ggplot2,
-    testthat
+    testthat,
+    covr
 License: GPL-3 + file LICENSE
 Encoding: UTF-8
 LazyData: true
