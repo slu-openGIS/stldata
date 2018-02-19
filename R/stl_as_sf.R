@@ -14,9 +14,14 @@
 #' @importFrom dplyr %>%
 #' @importFrom dplyr left_join
 #' @importFrom dplyr select
+#' @importFrom dplyr rename
 #'
 #' @export
 stl_as_sf <- function(table) {
+
+  # To prevent NOTE from R CMD check 'no visible binding for global variable'
+  AWATER = COUNTYFP = FUNCSTAT = GEOID = INTPTLAT = INTPTLON = MTFCC = NAME = NAMELSAD =
+  STATEFP = TRACTCE = NULL
 
   # quote input
   tblQ <- rlang::quo_name(rlang::enquo(table))
@@ -30,8 +35,10 @@ stl_as_sf <- function(table) {
     stop("The given table is not available for automatic conversion to an sf object.")
   }
 
+  tracts <- get("stl_sf_tracts")
+
   # merge data
-  merge <- left_join(stl_sf_tracts, table, by = c("GEOID" = "geoID"))
+  merge <- left_join(tracts, table, by = c("GEOID" = "geoID"))
 
   # clean up merge
   merge %>%
