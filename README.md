@@ -30,7 +30,7 @@ One gaol of `stlData` is to provide accessible data for learning how to manipula
 
 ### Data Tables
 
-The package currently contains seven data tables stored as tibbles with quanitative data about the city:
+The package currently contains eight data tables stored as tibbles with quanitative data about the city:
 
 -   `stl_tbl_asthma` - current asthma prevalence in 2014 by census tract via [Centers for Disease Control 500 Cities Project](https://www.cdc.gov/500cities/)
 -   `stl_tbl_income` - 2010 and 2015 median income estimates via the American Community Survey, by census tract
@@ -39,6 +39,7 @@ The package currently contains seven data tables stored as tibbles with quanitat
 -   `stl_tbl_murders` - all murders between 2008 and 2016 via the St. Louis Metropolitan Police Department
 -   `stl_tbl_sluPlaces` - a small number of locations at Saint Louis University, suitable for learning `leaflet`
 -   `stl_tbl_smoking` - current smoking in 2014 by census tract via [Centers for Disease Control 500 Cities Project](https://www.cdc.gov/500cities/)
+-   `stl_tbl_water` - rivers and streams listed under the Clean Water Act via the [Missouri Spatial Data Information Service](http://msdis.missouri.edu)
 
 ### Conversion of Tibbles to `sf` Objects
 
