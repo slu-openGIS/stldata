@@ -72,47 +72,103 @@
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
 <p>You can install <code>stlData</code> from <a href="https://github.com/chris-prener/stlData">Github</a> with:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># install.packages("devtools")</span>
-<span class="kw">library</span>(devtools)
-devtools<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/devtools/topics/install_github">install_github</a></span>(<span class="st">"chris-prener/stlData"</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">devtools<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/devtools/topics/install_github">install_github</a></span>(<span class="st">"chris-prener/stlData"</span>)</code></pre></div>
 </div>
 <div id="current-data" class="section level2">
 <h2 class="hasAnchor">
 <a href="#current-data" class="anchor"></a>Current Data</h2>
-<p>The package currently contains two data tables:</p>
+<div id="simple-features" class="section level3">
+<h3 class="hasAnchor">
+<a href="#simple-features" class="anchor"></a>Simple Features</h3>
+<p>One gaol of <code>stlData</code> is to provide accessible data for learning how to manipulate and map simple features objects in <code>R</code>. The package contains four <code>sf</code> objects describing the City of St. Louis:</p>
 <ul>
 <li>
-<code>stlAsmtha</code> - current asthma prevalence in 2014 by census tract via <a href="https://www.cdc.gov/500cities/">Centers for Disease Control 500 Cities Project</a>
+<code>stl_sf_boundary</code> - city boundary</li>
+<li>
+<code>stl_sf_historic</code> - historic districts</li>
+<li>
+<code>stl_sf_hydro</code> - Missouri side of the Mississippi River and the River Des Peres</li>
+<li>
+<code>stl_sf_tracts</code> - 2016 census tracts</li>
+</ul>
+</div>
+<div id="data-tables" class="section level3">
+<h3 class="hasAnchor">
+<a href="#data-tables" class="anchor"></a>Data Tables</h3>
+<p>The package currently contains seven data tables stored as tibbles with quanitative data about the city:</p>
+<ul>
+<li>
+<code>stl_tbl_asthma</code> - current asthma prevalence in 2014 by census tract via <a href="https://www.cdc.gov/500cities/">Centers for Disease Control 500 Cities Project</a>
 </li>
 <li>
-<code>stlIncome</code> - 2010 and 2015 median income estimates via the American Community Survey, by census tract</li>
+<code>stl_tbl_income</code> - 2010 and 2015 median income estimates via the American Community Survey, by census tract</li>
 <li>
-<code>stlInsurance</code> - lack of health insurance in 2014 by census tract via <a href="https://www.cdc.gov/500cities/">Centers for Disease Control 500 Cities Project</a>
+<code>stl_tbl_insurance</code> - lack of health insurance in 2014 by census tract via <a href="https://www.cdc.gov/500cities/">Centers for Disease Control 500 Cities Project</a>
 </li>
 <li>
-<code>stlLead</code> - blood lead level test result data from 2010-2015 via <a href="http://www.reuters.com/investigates/special-report/usa-lead-testing/#interactive-lead">Reuters</a> and 2015 5-year estimates for demographics (poverty and race) via the American Community Survey, by census tract</li>
+<code>stl_tbl_lead</code> - blood lead level test result data from 2010-2015 via <a href="http://www.reuters.com/investigates/special-report/usa-lead-testing/#interactive-lead">Reuters</a> and 2015 5-year estimates for demographics (poverty and race) via the American Community Survey, by census tract</li>
 <li>
-<code>stlMurders</code> - all murders between 2008 and 2016 via the St. Louis Metropolitan Police Department</li>
+<code>stl_tbl_murders</code> - all murders between 2008 and 2016 via the St. Louis Metropolitan Police Department</li>
 <li>
-<code>stlSmoking</code> - current smoking in 2014 by census tract via <a href="https://www.cdc.gov/500cities/">Centers for Disease Control 500 Cities Project</a>
+<code>stl_tbl_sluPlaces</code> - a small number of locations at Saint Louis University, suitable for learning <code>leaflet</code>
+</li>
+<li>
+<code>stl_tbl_smoking</code> - current smoking in 2014 by census tract via <a href="https://www.cdc.gov/500cities/">Centers for Disease Control 500 Cities Project</a>
 </li>
 </ul>
+</div>
+<div id="conversion-of-tibbles-to-sf-objects" class="section level3">
+<h3 class="hasAnchor">
+<a href="#conversion-of-tibbles-to-sf-objects" class="anchor"></a>Conversion of Tibbles to <code>sf</code> Objects</h3>
+<p>The following tibbles can be converted to <code>sf</code> objects using the <code><a href="reference/stl_as_sf.html">stl_as_sf()</a></code> function:</p>
+<ul>
+<li><code>stl_tbl_asthma</code></li>
+<li><code>stl_tbl_income</code></li>
+<li><code>stl_tbl_insurance</code></li>
+<li><code>stl_tbl_lead</code></li>
+<li><code>stl_tbl_smoking</code></li>
+</ul>
+<p>Input tables should not be quoted when the <code><a href="reference/stl_as_sf.html">stl_as_sf()</a></code> function is used:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">asthma &lt;-<span class="st"> </span><span class="kw"><a href="reference/stl_as_sf.html">stl_as_sf</a></span>(stl_tbl_asthma)</code></pre></div>
+</div>
 </div>
 <div id="useage" class="section level2">
 <h2 class="hasAnchor">
 <a href="#useage" class="anchor"></a>Useage</h2>
+<div id="basic-usage" class="section level3">
+<h3 class="hasAnchor">
+<a href="#basic-usage" class="anchor"></a>Basic Usage</h3>
 <p>Once the package is loaded, the data contained in <code>stlData</code> can be assigned to data frames in your global environment and then explored. For example, to load the <code>stlAsthma</code> data:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(<span class="st">"stlData"</span>)
-asthma &lt;-<span class="st"> </span>stlAsthma
+asthma &lt;-<span class="st"> </span>stl_tbl_asthma
 <span class="kw">str</span>(asthma)</code></pre></div>
 <p>Additional examples and information are available in each table’s help file. For example:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><a href="reference/stlAsthma.html">?stlAsthma</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><a href="reference/stl_tbl_asthma.html">?stl_tbl_asthma</a></code></pre></div>
 </div>
-<div id="future-data" class="section level2">
-<h2 class="hasAnchor">
-<a href="#future-data" class="anchor"></a>Future Data</h2>
-<p>I am currently working on a set of tables with educational outcomes by school for St. Louis City Public Schools.</p>
-<p>If you have data about the City or the metro area that you would like to donate or variables you’d like to see added to a table, open up an issue on the package’s <a href="http://github.com/chris-prener/stlData/issues">GitHub page</a>.</p>
+<div id="mapping-with-sf" class="section level3">
+<h3 class="hasAnchor">
+<a href="#mapping-with-sf" class="anchor"></a>Mapping with <code>sf</code>
+</h3>
+<p>If you have the <a href="https://github.com/tidyverse/ggplot2">development version of <code>ggplot2</code></a>, the <code>sf</code> objects in the package can be mapped using the <code>geom_sf()</code> function:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>() <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_sf</span>(<span class="dt">data =</span> stl_sf_boundary, <span class="dt">fill =</span> <span class="st">"#5d5d5d"</span>, <span class="dt">color =</span> <span class="st">"#5d5d5d"</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_sf</span>(<span class="dt">data =</span> stl_sf_historic, <span class="dt">fill =</span> <span class="st">"#d48a72"</span>, <span class="dt">color =</span> <span class="st">"#d48a72"</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_sf</span>(<span class="dt">data =</span> stl_sf_hydro, <span class="dt">fill =</span> <span class="st">"#72bcd4"</span>, <span class="dt">color =</span> <span class="st">"#72bcd4"</span>)  <span class="op">+</span>
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">title =</span> <span class="st">"Historic Districts"</span>, <span class="dt">subtitle =</span> <span class="st">"St. Louis, MO"</span>)</code></pre></div>
+<div class="figure">
+<img src="reference/figures/refMap.png">
+</div>
+<p>When the tibbles like <code>stl_tbl_asthma</code> are converted to <code>sf</code> objects, they can be mapped as well:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">asthma &lt;-<span class="st"> </span><span class="kw"><a href="reference/stl_as_sf.html">stl_as_sf</a></span>(stl_tbl_asthma)
+
+<span class="kw">ggplot</span>() <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_sf</span>(<span class="dt">data =</span> stl_sf_asthma, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">fill =</span> pctAsthma), <span class="dt">color =</span> <span class="st">"#5d5d5d"</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">scale_fill_viridis</span>(<span class="dt">name =</span> <span class="st">"Percent"</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">title =</span> <span class="st">"Crude Asthma Prevalence"</span>, <span class="dt">subtitle =</span> <span class="st">"St. Louis, MO"</span>)</code></pre></div>
+<div class="figure">
+<img src="reference/figures/asthmaMap.png">
+</div>
+</div>
 </div>
 <div id="contributor-code-of-conduct" class="section level2">
 <h2 class="hasAnchor">
@@ -133,7 +189,7 @@ asthma &lt;-<span class="st"> </span>stlAsthma
 </li>
 </ul>
 <h2>License</h2>
-<p><a href="https://opensource.org/licenses/mit-license.php">MIT</a> + file <a href="LICENSE.html">LICENSE</a></p>
+<p><a href="https://www.r-project.org/Licenses/GPL-3">GPL-3</a> + file <a href="LICENSE.html">LICENSE</a></p>
 <h2>Developers</h2>
 <ul class="list-unstyled">
 <li>Christopher Prener <br><small class="roles"> Author, maintainer </small> </li>
