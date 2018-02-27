@@ -6,7 +6,7 @@ Authors@R: person("Christopher", "Prener", email = "chris.prener@slu.edu",
 Description: Contains a number of data sets representing various phenomena in the City of St. Louis. 
     These data sets are primary designed for teaching statistics, data science, and 
     spatial data analysis using R.
-Depends: R (>= 3.3.3)
+Depends: R (>= 3.3)
 Suggests: ggplot2,
     testthat,
     covr
