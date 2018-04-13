@@ -46,6 +46,9 @@ matrix:
 build_script:
   - travis-tool.sh install_deps
 
+before_build:
+  - Rscript -e 'install.packages("sf")'
+
 test_script:
   - travis-tool.sh run_tests
 
