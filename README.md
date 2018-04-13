@@ -13,7 +13,7 @@ Installation
 You can install `stlData` from [Github](https://github.com/chris-prener/stlData) with:
 
 ``` r
-devtools::install_github("chris-prener/stlData")
+devtools::install_github("slu-openGIS/stlData")
 ```
 
 Use with Simple Features

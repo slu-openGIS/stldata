@@ -28,7 +28,7 @@ The `stlData` package contains various data sets representing the City of St. Lo
 You can install `stlData` from [Github](https://github.com/chris-prener/stlData) with:
 
 ```{r gh-installation, eval = FALSE}
-devtools::install_github("chris-prener/stlData")
+devtools::install_github("slu-openGIS/stlData")
 ```
 
 ## Use with Simple Features
