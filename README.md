@@ -3,7 +3,7 @@
 stlData <img src="man/figures/logo.png" align="right" />
 ========================================================
 
-[![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing) [![Travis-CI Build Status](https://travis-ci.org/chris-prener/stlData.svg?branch=master)](https://travis-ci.org/chris-prener/stlData) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/chris-prener/stlData?branch=master&svg=true)](https://ci.appveyor.com/project/chris-prener/stlData) [![Coverage Status](https://img.shields.io/codecov/c/github/chris-prener/stlData/master.svg)](https://codecov.io/github/chris-prener/stlData?branch=master) [![DOI](https://zenodo.org/badge/85344799.svg)](https://zenodo.org/badge/latestdoi/85344799) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/stlData)](https://cran.r-project.org/package=stlData)
+[![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing) [![Travis-CI Build Status](https://travis-ci.org/slu-openGIS/stlData.svg?branch=master)](https://travis-ci.org/slu-openGIS/stlData) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/slu-openGIS/stlData?branch=master&svg=true)](https://ci.appveyor.com/project/chris-prener/stlData) [![Coverage Status](https://img.shields.io/codecov/c/github/slu-openGIS/stlData/master.svg)](https://codecov.io/github/slu-openGIS/stlData?branch=master) [![DOI](https://zenodo.org/badge/85344799.svg)](https://zenodo.org/badge/latestdoi/85344799) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/stlData)](https://cran.r-project.org/package=stlData)
 
 The `stlData` package contains various data sets representing the City of St. Louis. These data sets are primary designed for teaching statistics, data science, and spatial data analysis using `R`.
 
@@ -16,17 +16,13 @@ You can install `stlData` from [Github](https://github.com/chris-prener/stlData)
 devtools::install_github("chris-prener/stlData")
 ```
 
+Use with Simple Features
+------------------------
+
+One goal of `stlData` is to provide accessible data for learning how to manipulate and map simple features objects in `R`. However, the installation of [`sf`](https://r-spatial.github.io/sf/) requires a number of dependencies. To make `stlData` as accessible as possible, `sf` is not required. If `sf` is not installed, only the data tables listed below will be fully accessible and functional.
+
 Current Data
 ------------
-
-### Simple Features
-
-One goal of `stlData` is to provide accessible data for learning how to manipulate and map simple features objects in `R`. The package contains four `sf` objects describing the City of St. Louis:
-
--   `stl_sf_boundary` - city boundary
--   `stl_sf_historic` - historic districts
--   `stl_sf_hydro` - Missouri side of the Mississippi River and the River Des Peres
--   `stl_sf_tracts` - 2016 census tracts
 
 ### Data Tables
 
@@ -40,6 +36,15 @@ The package currently contains eight data tables stored as tibbles with quantita
 -   `stl_tbl_sluPlaces` - a small number of locations at Saint Louis University
 -   `stl_tbl_smoking` - current smoking in 2014 by census tract via [Centers for Disease Control 500 Cities Project](https://www.cdc.gov/500cities/)
 -   `stl_tbl_water` - rivers and streams listed under the Clean Water Act via the [Missouri Spatial Data Information Service](http://msdis.missouri.edu)
+
+### Simple Features Objects
+
+The package contains four `sf` objects describing the City of St. Louis:
+
+-   `stl_sf_boundary` - city boundary
+-   `stl_sf_historic` - historic districts
+-   `stl_sf_hydro` - Missouri side of the Mississippi River and the River Des Peres
+-   `stl_sf_tracts` - 2016 census tracts
 
 ### Conversion of Tibbles to `sf` Objects
 
@@ -85,7 +90,7 @@ The `stl_tbl_murders` and `stl_tbl_water` data have been created for practicing 
 If you have the [development version of `ggplot2`](https://github.com/tidyverse/ggplot2), the `sf` objects in the package can be mapped using the `geom_sf()` function:
 
 ``` r
-ggplot() + 
+ggplot() +
   geom_sf(data = stl_sf_boundary, fill = "#5d5d5d", color = "#5d5d5d") +
   geom_sf(data = stl_sf_historic, fill = "#d48a72", color = "#d48a72") +
   geom_sf(data = stl_sf_hydro, fill = "#72bcd4", color = "#72bcd4")  +
@@ -99,7 +104,7 @@ When the tibbles like `stl_tbl_asthma` are converted to `sf` objects, they can b
 ``` r
 asthma <- stl_as_sf(stl_tbl_asthma)
 
-ggplot() + 
+ggplot() +
   geom_sf(data = asthma, mapping = aes(fill = pctAsthma), color = "#5d5d5d") +
   scale_fill_viridis(name = "Percent") +
   labs(title = "Crude Asthma Prevalence", subtitle = "St. Louis, MO")
@@ -110,4 +115,4 @@ ggplot() +
 Contributor Code of Conduct
 ---------------------------
 
-Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.
+Please note that this project is released with a [Contributor Code of Conduct](.github/CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
