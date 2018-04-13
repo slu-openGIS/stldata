@@ -7,9 +7,6 @@ Description: Contains a number of data sets representing various phenomena in th
     These data sets are primary designed for teaching statistics, data science, and 
     spatial data analysis using R.
 Depends: R (>= 3.3)
-Suggests: ggplot2,
-    testthat,
-    covr
 License: GPL-3 + file LICENSE
 Encoding: UTF-8
 LazyData: true
@@ -17,6 +14,10 @@ URL: https://github.com/chris-prener/stlData
 BugReports: https://github.com/chris-prener/stlData/issues
 RoxygenNote: 6.0.1
 Imports: tibble,
-    sf,
     dplyr,
     rlang
+Suggests: 
+    covr,
+    ggplot2,
+    sf,
+    testthat

@@ -29,6 +29,9 @@ before_install:
     - chmod +x ./.travis/install.sh
     - ./.travis/install.sh
 
+before_test:
+    - Rscript -e 'install.packages("sf")'
+
 after_success:
   - dropdb postgis
   - createdb postgis

@@ -2,7 +2,6 @@
 
 export("%nin%")
 export(stl_as_sf)
-import(sf)
 importFrom(dplyr,"%>%")
 importFrom(dplyr,left_join)
 importFrom(dplyr,rename)

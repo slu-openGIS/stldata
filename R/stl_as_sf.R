@@ -10,7 +10,6 @@
 #'
 #' @return A simple features object with the specified tibble joined to the appropriate geometry.
 #'
-#' @import sf
 #' @importFrom dplyr %>%
 #' @importFrom dplyr left_join
 #' @importFrom dplyr select
@@ -21,31 +20,48 @@ stl_as_sf <- function(table) {
 
   # To prevent NOTE from R CMD check 'no visible binding for global variable'
   AWATER = COUNTYFP = FUNCSTAT = GEOID = INTPTLAT = INTPTLON = MTFCC = NAME = NAMELSAD =
-  STATEFP = TRACTCE = NULL
+    STATEFP = TRACTCE = NULL
 
   # quote input
   tblQ <- rlang::quo_name(rlang::enquo(table))
 
-  # create list of acceptable tables
-  tableList <- c("stl_tbl_asthma", "stl_tbl_income", "stl_tbl_insurance",
-                 "stl_tbl_lead", "stl_tbl_smoking")
+  if (requireNamespace("sf", quietly = TRUE)) {
 
-  # compare input with list of tables
-  if (!!tblQ %nin% tableList) {
-    stop("The given table is not available for automatic conversion to an sf object.")
+    # create list of acceptable tables
+    tableList <- c("stl_tbl_asthma", "stl_tbl_income", "stl_tbl_insurance",
+                   "stl_tbl_lead", "stl_tbl_smoking")
+
+    # compare input with list of tables
+    if (!!tblQ %nin% tableList) {
+      stop("The given table is not available for automatic conversion to an sf object.")
+    }
+
+    tracts <- get("stl_sf_tracts")
+
+    # merge data
+    merge <- left_join(tracts, table, by = c("GEOID" = "geoID"))
+
+    # clean up merge
+    merge %>%
+      select(-STATEFP, -COUNTYFP, -TRACTCE, -NAME, -NAMELSAD, -MTFCC, -FUNCSTAT, -AWATER,
+             -INTPTLAT, -INTPTLON) %>%
+      rename(geoID = GEOID) -> merge
+
+    test <- class(merge)[1]
+
+    if (test != "sf"){
+
+      stop("The package sf must be loaded prior to executing this function.")
+
+    }
+
+    # return output
+    return(merge)
+
+  } else {
+
+    stop("The package sf is required for this function but not found.")
+
   }
 
-  tracts <- get("stl_sf_tracts")
-
-  # merge data
-  merge <- left_join(tracts, table, by = c("GEOID" = "geoID"))
-
-  # clean up merge
-  merge %>%
-    select(-STATEFP, -COUNTYFP, -TRACTCE, -NAME, -NAMELSAD, -MTFCC, -FUNCSTAT, -AWATER,
-           -INTPTLAT, -INTPTLON) %>%
-    rename(geoID = GEOID) -> merge
-
-  # return output
-  return(merge)
 }
