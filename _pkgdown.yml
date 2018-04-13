@@ -1,0 +1,33 @@
+url: https://slu-openGIS.github.io/stlData/
+
+authors:
+  Christopher Prener:
+    href: https://chris-prener.github.io
+
+reference:
+  - title: "Project Data"
+    desc: "Convert data tables to simple features objects."
+    contents:
+    - stl_as_sf
+  - title: "Data Tables"
+    desc: "Data tables included in package."
+    contents:
+    - stl_tbl_asthma
+    - stl_tbl_income
+    - stl_tbl_insurance
+    - stl_tbl_lead
+    - stl_tbl_murders
+    - stl_tbl_sluPlaces
+    - stl_tbl_smoking
+    - stl_tbl_water
+  - title: "Simple Features"
+    desc: "Simple features objects included in package."
+    contents:
+    - stl_sf_boundary
+    - stl_sf_historic
+    - stl_sf_hydro
+    - stl_sf_tracts
+  - title: "Helper Functions"
+    desc: "Additional functions included in package."
+    contents:
+    - "%nin%"

@@ -43,7 +43,7 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/chris-prener/stlData">
+  <a href="https://github.com/slu-openGIS/stlData">
     <span class="fa fa-github fa-lg"></span>
      
   </a>
@@ -77,24 +77,14 @@
 <p>You can install <code>stlData</code> from <a href="https://github.com/chris-prener/stlData">Github</a> with:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">devtools<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/devtools/topics/install_github">install_github</a></span>(<span class="st">"chris-prener/stlData"</span>)</code></pre></div>
 </div>
+<div id="use-with-simple-features" class="section level2">
+<h2 class="hasAnchor">
+<a href="#use-with-simple-features" class="anchor"></a>Use with Simple Features</h2>
+<p>One goal of <code>stlData</code> is to provide accessible data for learning how to manipulate and map simple features objects in <code>R</code>. However, the installation of <a href="https://r-spatial.github.io/sf/"><code>sf</code></a> requires a number of dependencies. To make <code>stlData</code> as accessible as possible, <code>sf</code> is not required. If <code>sf</code> is not installed, only the data tables listed below will be fully accessible and functional.</p>
+</div>
 <div id="current-data" class="section level2">
 <h2 class="hasAnchor">
 <a href="#current-data" class="anchor"></a>Current Data</h2>
-<div id="simple-features" class="section level3">
-<h3 class="hasAnchor">
-<a href="#simple-features" class="anchor"></a>Simple Features</h3>
-<p>One goal of <code>stlData</code> is to provide accessible data for learning how to manipulate and map simple features objects in <code>R</code>. The package contains four <code>sf</code> objects describing the City of St. Louis:</p>
-<ul>
-<li>
-<code>stl_sf_boundary</code> - city boundary</li>
-<li>
-<code>stl_sf_historic</code> - historic districts</li>
-<li>
-<code>stl_sf_hydro</code> - Missouri side of the Mississippi River and the River Des Peres</li>
-<li>
-<code>stl_sf_tracts</code> - 2016 census tracts</li>
-</ul>
-</div>
 <div id="data-tables" class="section level3">
 <h3 class="hasAnchor">
 <a href="#data-tables" class="anchor"></a>Data Tables</h3>
@@ -120,6 +110,21 @@
 <li>
 <code>stl_tbl_water</code> - rivers and streams listed under the Clean Water Act via the <a href="http://msdis.missouri.edu">Missouri Spatial Data Information Service</a>
 </li>
+</ul>
+</div>
+<div id="simple-features-objects" class="section level3">
+<h3 class="hasAnchor">
+<a href="#simple-features-objects" class="anchor"></a>Simple Features Objects</h3>
+<p>The package contains four <code>sf</code> objects describing the City of St. Louis:</p>
+<ul>
+<li>
+<code>stl_sf_boundary</code> - city boundary</li>
+<li>
+<code>stl_sf_historic</code> - historic districts</li>
+<li>
+<code>stl_sf_hydro</code> - Missouri side of the Mississippi River and the River Des Peres</li>
+<li>
+<code>stl_sf_tracts</code> - 2016 census tracts</li>
 </ul>
 </div>
 <div id="conversion-of-tibbles-to-sf-objects" class="section level3">
@@ -160,7 +165,7 @@ asthma &lt;-<span class="st"> </span>stl_tbl_asthma
 <a href="#mapping-with-sf" class="anchor"></a>Mapping with <code>sf</code>
 </h3>
 <p>If you have the <a href="https://github.com/tidyverse/ggplot2">development version of <code>ggplot2</code></a>, the <code>sf</code> objects in the package can be mapped using the <code>geom_sf()</code> function:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>() <span class="op">+</span><span class="st"> </span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>() <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_sf</span>(<span class="dt">data =</span> stl_sf_boundary, <span class="dt">fill =</span> <span class="st">"#5d5d5d"</span>, <span class="dt">color =</span> <span class="st">"#5d5d5d"</span>) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_sf</span>(<span class="dt">data =</span> stl_sf_historic, <span class="dt">fill =</span> <span class="st">"#d48a72"</span>, <span class="dt">color =</span> <span class="st">"#d48a72"</span>) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_sf</span>(<span class="dt">data =</span> stl_sf_hydro, <span class="dt">fill =</span> <span class="st">"#72bcd4"</span>, <span class="dt">color =</span> <span class="st">"#72bcd4"</span>)  <span class="op">+</span>
@@ -171,7 +176,7 @@ asthma &lt;-<span class="st"> </span>stl_tbl_asthma
 <p>When the tibbles like <code>stl_tbl_asthma</code> are converted to <code>sf</code> objects, they can be mapped as well:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">asthma &lt;-<span class="st"> </span><span class="kw"><a href="reference/stl_as_sf.html">stl_as_sf</a></span>(stl_tbl_asthma)
 
-<span class="kw">ggplot</span>() <span class="op">+</span><span class="st"> </span>
+<span class="kw">ggplot</span>() <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_sf</span>(<span class="dt">data =</span> asthma, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">fill =</span> pctAsthma), <span class="dt">color =</span> <span class="st">"#5d5d5d"</span>) <span class="op">+</span>
 <span class="st">  </span><span class="kw">scale_fill_viridis</span>(<span class="dt">name =</span> <span class="st">"Percent"</span>) <span class="op">+</span>
 <span class="st">  </span><span class="kw">labs</span>(<span class="dt">title =</span> <span class="st">"Crude Asthma Prevalence"</span>, <span class="dt">subtitle =</span> <span class="st">"St. Louis, MO"</span>)</code></pre></div>
@@ -183,7 +188,7 @@ asthma &lt;-<span class="st"> </span>stl_tbl_asthma
 <div id="contributor-code-of-conduct" class="section level2">
 <h2 class="hasAnchor">
 <a href="#contributor-code-of-conduct" class="anchor"></a>Contributor Code of Conduct</h2>
-<p>Please note that this project is released with a <a href="CONDUCT.md">Contributor Code of Conduct</a>. By participating in this project you agree to abide by its terms.</p>
+<p>Please note that this project is released with a <a href=".github/CODE_OF_CONDUCT.md">Contributor Code of Conduct</a>. By participating in this project you agree to abide by its terms.</p>
 </div>
 </div>
 </div>
@@ -193,22 +198,24 @@ asthma &lt;-<span class="st"> </span>stl_tbl_asthma
     <h2 class="hasAnchor">
 <a href="#sidebar" class="anchor"></a>Links</h2>
 <ul class="list-unstyled">
-<li>Browse source code at <br><a href="https://github.com/chris-prener/stlData">https://​github.com/​chris-prener/​stlData</a>
+<li>Browse source code at <br><a href="https://github.com/slu-openGIS/stlData">https://​github.com/​slu-openGIS/​stlData</a>
 </li>
-<li>Report a bug at <br><a href="https://github.com/chris-prener/stlData/issues">https://​github.com/​chris-prener/​stlData/​issues</a>
+<li>Report a bug at <br><a href="https://github.com/slu-openGIS/stlData/issues">https://​github.com/​slu-openGIS/​stlData/​issues</a>
 </li>
 </ul>
 <h2>License</h2>
 <p><a href="https://www.r-project.org/Licenses/GPL-3">GPL-3</a> + file <a href="LICENSE.html">LICENSE</a></p>
 <h2>Developers</h2>
 <ul class="list-unstyled">
-<li>Christopher Prener <br><small class="roles"> Author, maintainer </small> </li>
+<li>
+<a href="https://chris-prener.github.io">Christopher Prener</a> <br><small class="roles"> Author, maintainer </small> </li>
 </ul>
 <h2>Dev status</h2>
 <ul class="list-unstyled">
-<li><a href="https://travis-ci.org/chris-prener/stlData"><img src="https://travis-ci.org/chris-prener/stlData.svg?branch=master" alt="Travis-CI Build Status"></a></li>
-<li><a href="https://ci.appveyor.com/project/chris-prener/stlData"><img src="https://ci.appveyor.com/api/projects/status/github/chris-prener/stlData?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></li>
-<li><a href="https://codecov.io/github/chris-prener/stlData?branch=master"><img src="https://img.shields.io/codecov/c/github/chris-prener/stlData/master.svg" alt="Coverage Status"></a></li>
+<li><a href="https://www.tidyverse.org/lifecycle/#maturing"><img src="https://img.shields.io/badge/lifecycle-maturing-blue.svg" alt="lifecycle"></a></li>
+<li><a href="https://travis-ci.org/slu-openGIS/stlData"><img src="https://travis-ci.org/slu-openGIS/stlData.svg?branch=master" alt="Travis-CI Build Status"></a></li>
+<li><a href="https://ci.appveyor.com/project/chris-prener/stlData"><img src="https://ci.appveyor.com/api/projects/status/github/slu-openGIS/stlData?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></li>
+<li><a href="https://codecov.io/github/slu-openGIS/stlData?branch=master"><img src="https://img.shields.io/codecov/c/github/slu-openGIS/stlData/master.svg" alt="Coverage Status"></a></li>
 <li><a href="https://zenodo.org/badge/latestdoi/85344799"><img src="https://zenodo.org/badge/85344799.svg" alt="DOI"></a></li>
 <li><a href="https://cran.r-project.org/package=stlData"><img src="http://www.r-pkg.org/badges/version/stlData" alt="CRAN_Status_Badge"></a></li>
 </ul>
@@ -218,7 +225,7 @@ asthma &lt;-<span class="st"> </span>stl_tbl_asthma
 
 
       <footer><div class="copyright">
-  <p>Developed by Christopher Prener.</p>
+  <p>Developed by <a href="https://chris-prener.github.io">Christopher Prener</a>.</p>
 </div>
 
 <div class="pkgdown">
