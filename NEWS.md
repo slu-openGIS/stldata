@@ -1,4 +1,4 @@
-# stlData v2.0.1
+# stlData v2.1.0.9000
 The `stlData` package is now part of the `stl-openGIS` project and organization!
 
 ## major
