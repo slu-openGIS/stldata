@@ -12,27 +12,27 @@ knitr::opts_chunk$set(
 )
 ```
 
-# stlData <img src="man/figures/logo.png" align="right" />
+# stldata <img src="man/figures/logo.png" align="right" />
 
 [![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
-[![Travis-CI Build Status](https://travis-ci.org/slu-openGIS/stlData.svg?branch=master)](https://travis-ci.org/slu-openGIS/stlData)
-[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/slu-openGIS/stlData?branch=master&svg=true)](https://ci.appveyor.com/project/chris-prener/stlData)
-[![Coverage Status](https://img.shields.io/codecov/c/github/slu-openGIS/stlData/master.svg)](https://codecov.io/github/slu-openGIS/stlData?branch=master)
+[![Travis-CI Build Status](https://travis-ci.org/slu-openGIS/stldata.svg?branch=master)](https://travis-ci.org/slu-openGIS/stldata)
+[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/slu-openGIS/stldata?branch=master&svg=true)](https://ci.appveyor.com/project/chris-prener/stldata)
+[![Coverage Status](https://img.shields.io/codecov/c/github/slu-openGIS/stldata/master.svg)](https://codecov.io/github/slu-openGIS/stldata?branch=master)
 [![DOI](https://zenodo.org/badge/85344799.svg)](https://zenodo.org/badge/latestdoi/85344799)
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/stlData)](https://cran.r-project.org/package=stlData)
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/stldata)](https://cran.r-project.org/package=stldata)
 
 The `stlData` package contains various data sets representing the City of St. Louis. These data sets are primary designed for teaching statistics, data science, and spatial data analysis using `R`.
 
 ## Installation
 
-You can install `stlData` from [Github](https://github.com/chris-prener/stlData) with:
+You can install `stldata` from [Github](https://github.com/chris-prener/stlData) with:
 
 ```{r gh-installation, eval = FALSE}
 devtools::install_github("slu-openGIS/stlData")
 ```
 
 ## Use with Simple Features
-One goal of `stlData` is to provide accessible data for learning how to manipulate and map simple features objects in `R`. However, the installation of [`sf`](https://r-spatial.github.io/sf/) requires a number of dependencies. To make `stlData` as accessible as possible, `sf` is not required. If `sf` is not installed, only the data tables listed below will be fully accessible and functional.
+One goal of `stldata` is to provide accessible data for learning how to manipulate and map simple features objects in `R`. However, the installation of [`sf`](https://r-spatial.github.io/sf/) requires a number of dependencies. To make `stldata` as accessible as possible, `sf` is not required. If `sf` is not installed, only the data tables listed below will be fully accessible and functional.
 
 ## Current Data
 ### Data Tables
@@ -72,10 +72,10 @@ asthma <- stl_as_sf(stl_tbl_asthma)
 
 ## Useage
 ### Basic Usage
-Once the package is loaded, the data contained in `stlData` can be assigned to data frames in your global environment and then explored. For example, to load the `stl_tbl_asthma` data:
+Once the package is loaded, the data contained in `stldata` can be assigned to data frames in your global environment and then explored. For example, to load the `stl_tbl_asthma` data:
 
 ```r
-library("stlData")
+library("stldata")
 asthma <- stl_tbl_asthma
 str(asthma)
 ```

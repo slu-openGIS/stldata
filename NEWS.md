@@ -1,5 +1,5 @@
-# stlData v2.1.0.9000
-The `stlData` package is now part of the `stl-openGIS` project and organization!
+# stldata v2.1.0.9000
+The `stldata` package is now part of the `stl-openGIS` project and organization!
 
 ## major
 * Renamed all data tables in package
@@ -14,14 +14,14 @@ The `stlData` package is now part of the `stl-openGIS` project and organization!
 * Added `.github` directory with guidance for contributing, updated the code of conduct document
 * Updated the `LICENSE` file but text remains the same
 
-# stlData v1.4.0
+# stldata v1.4.0
 * add simple features objects
 
-# stlData v1.3.0
-This update to the Shaw version of the stlData package adds a table stlIncome designed for teaching reshaping data from wide to long (and vice versa) as well as dependent samples t tests.
+# stldata v1.3.0
+This update to the Shaw version of the `stldata` package adds a table stlIncome designed for teaching reshaping data from wide to long (and vice versa) as well as dependent samples t tests.
 
-# stlData v1.1.0
+# stldata v1.1.0
 This is a minor update to the initial v1 Shaw release. It adds come clarity to the README file and adds support for Travis-CI and Appveyor.
 
 # stlData v1.0.0
-This is the initial full release of the stlData package, which currently contains five data sets focused on the City of St. Louis.
+This is the initial full release of the `stldata` package, which currently contains five data sets focused on the City of St. Louis.

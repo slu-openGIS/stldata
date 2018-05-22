@@ -1,6 +1,7 @@
 ^\.github$
 ^.*\.Rproj$
 ^\.Rproj\.user$
+^LICENSE
 ^README\.Rmd$
 ^README-.*\.png$
 ^CONDUCT\.md$

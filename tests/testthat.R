@@ -1,4 +1,4 @@
 library(testthat)
-library(stlData)
+library(stldata)
 
-test_check("stlData")
+test_check("stldata")

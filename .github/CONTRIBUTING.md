@@ -1,4 +1,4 @@
-# Contributing to stlData
+# Contributing to stldata
 
 -   [Prerequisites](#prerequisites)
 -   [PR Process](#pr-process)
@@ -16,7 +16,7 @@
 -   [Credits](#credits)
 -   [Code of Conduct](#code-of-conduct)
 
-This explains how to propose a change to stlData via a pull request using
+This explains how to propose a change to `stldata` via a pull request using
 Git and GitHub.
 
 ## Prerequisites
@@ -36,14 +36,14 @@ area.
 ### Fork, clone, branch
 
 The first thing you'll need to do is to [fork](https://help.github.com/articles/fork-a-repo/)
-the [stlData GitHub repo](https://github.com/slu-openGIS/stlData), and
+the [stldata GitHub repo](https://github.com/slu-openGIS/stldata), and
 then clone it locally. We recommend that you create a branch for each PR.
 
 ### Check
 
 Before changing anything, make sure the package still passes `R CMD check`
 locally for you. When in doubt, compare your `R CMD check` results with current
-results for [stlData on Travis](https://travis-ci.org/slu-openGIS/stlData)
+results for [stldata on Travis](https://travis-ci.org/slu-openGIS/stldata)
 (checks on Linux and/or MacOS) and, if applicable, AppVeyor (checks on Windows).
 You'll do this again before you finalize your pull request, but this baseline
 will make it easier to pinpoint any problems introduced by your changes.

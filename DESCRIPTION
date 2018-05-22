@@ -1,23 +1,23 @@
-Package: stlData
+Package: stldata
 Title: City of St. Louis Data
 Version: 2.1.0.9000
 Authors@R: person("Christopher", "Prener", email = "chris.prener@slu.edu",
                   role = c("aut", "cre"))
-Description: Contains a number of data sets representing various phenomena in the City of St. Louis. 
-    These data sets are primary designed for teaching statistics, data science, and 
+Description: Contains a number of data sets representing various phenomena in the City of St. Louis.
+    These data sets are primary designed for teaching statistics, data science, and
     spatial data analysis using R.
 Depends: R (>= 3.3)
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-URL: https://github.com/slu-openGIS/stlData
-BugReports: https://github.com/slu-openGIS/stlData/issues
+URL: https://github.com/slu-openGIS/stldata
+BugReports: https://github.com/slu-openGIS/stldata/issues
 RoxygenNote: 6.0.1
-Imports: 
+Imports:
     dplyr,
     rlang,
     tibble
-Suggests: 
+Suggests:
     covr,
     ggplot2,
     sf,

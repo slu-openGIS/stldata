@@ -7,8 +7,8 @@
 #' the Centers for Disease Control's 500 Cities Project. If you have additional
 #' data you would like to donate to the package or variables you would like to see added to
 #' a table, please contact Chris by opening an issue on the package's
-#' \href{https://github.com/chris-prener/stldata/issues}{Github page}.
+#' \href{https://github.com/slu-openGIS/stldata/issues}{Github page}.
 #'
-#' @name stlData
+#' @name stldata
 #' @docType package
 NULL
