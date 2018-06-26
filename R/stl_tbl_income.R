@@ -13,9 +13,10 @@
 #'   \item{nameLSAD}{census tract string}
 #'   \item{mi10}{2010 median income estimate}
 #'   \item{mi10_moe}{margin of error for 2010 median income estimate}
-#'   \item{mi10_inflate}{2010 median income estimate in 2015 dollars}
-#'   \item{mi15}{2015 median income estimate}
-#'   \item{mi15_moe}{margin of error for 2015 median income estimate}
+#'   \item{mi10_inflate}{2010 median income estimate in 2016 dollars}
+#'   \item{mi16}{2016 median income estimate}
+#'   \item{mi16_moe}{margin of error for 2016 median income estimate}
+#'   \item{delta}{change in median income from 2010 to 2016}
 #'   }
 #'
 #' @source \href{https://www.census.gov}{U.S. Census Bureau}

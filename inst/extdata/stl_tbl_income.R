@@ -24,5 +24,5 @@ stl_tbl_income %>%
   mutate(tractCE = as.integer(str_sub(geoID, start = -6, end = -1))) %>%
   select(geoID, tractCE, nameLSAD, everything()) -> stl_tbl_income
 
-save(stl_tbl_income, file = "data/stl_sf_tracts.rda")
+save(stl_tbl_income, file = "data/stl_tbl_income.rda")
 saveRDS(stl_tbl_income, "tests/testthat/data/stl_tbl_income.rds")
