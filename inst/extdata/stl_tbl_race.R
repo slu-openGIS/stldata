@@ -5,7 +5,7 @@ library(stringr)
 race2010 <- get_acs(geography = "tract", table = "B02001", year = 2010, state = 29, county = 510, output = "wide")
 race2016 <- get_acs(geography = "tract", table = "B02001", year = 2016, state = 29, county = 510, output = "wide")
 
-pop2010 <- select(race2010, GEOID, B02001_001E, B02001_001M)
+pop2010 <- select(race2010, GEOID, NAME, B02001_001E, B02001_001M)
 pop2016 <- select(race2016, GEOID, B02001_001E, B02001_001M)
 
 race2010 %>%
@@ -35,3 +35,23 @@ stl_tbl_race %>%
 
 save(stl_tbl_income, file = "data/stl_tbl_race.rda")
 saveRDS(stl_tbl_income, "tests/testthat/data/stl_tbl_race.rds")
+
+pop2010 %>%
+  rename(pop10 = B02001_001E) %>%
+  rename(pop10_moe = B02001_001M) -> pop2010
+
+pop2016 %>%
+  rename(pop16 = B02001_001E) %>%
+  rename(pop16_moe = B02001_001M) -> pop2016
+
+stl_tbl_pop <- left_join(pop2010, pop2016, by = "GEOID")
+
+stl_tbl_pop %>%
+  mutate(delta = pop16-pop10) %>%
+  rename(geoID = GEOID) %>%
+  rename(nameLSAD = NAME) %>%
+  mutate(tractCE = as.integer(str_sub(geoID, start = -6, end = -1))) %>%
+  select(geoID, tractCE, nameLSAD, everything())-> stl_tbl_pop
+
+save(stl_tbl_income, file = "data/stl_tbl_pop.rda")
+saveRDS(stl_tbl_income, "tests/testthat/data/stl_tbl_pop.rds")
