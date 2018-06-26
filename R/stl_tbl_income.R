@@ -1,6 +1,6 @@
-#' Median Income by Census Tract, 2010 and 2015
+#' Median Income by Census Tract, 2010 and 2016
 #'
-#' A data set containing the estimated median incomes for each City of St. Louis Census Tract for 2010 and 2015.
+#' A data set containing the estimated median incomes for each City of St. Louis Census Tract for 2010 and 2016.
 #'
 #' @docType data
 #'

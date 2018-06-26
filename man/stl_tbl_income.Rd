@@ -3,7 +3,7 @@
 \docType{data}
 \name{stl_tbl_income}
 \alias{stl_tbl_income}
-\title{Median Income by Census Tract, 2010 and 2015}
+\title{Median Income by Census Tract, 2010 and 2016}
 \format{A tibble with 106 rows and 8 variables:
 \describe{
   \item{geoID}{full census tract id number}
@@ -23,7 +23,7 @@
 data(stl_tbl_income)
 }
 \description{
-A data set containing the estimated median incomes for each City of St. Louis Census Tract for 2010 and 2015.
+A data set containing the estimated median incomes for each City of St. Louis Census Tract for 2010 and 2016.
 }
 \examples{
 str(stl_tbl_income)

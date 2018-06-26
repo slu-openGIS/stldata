@@ -29,7 +29,7 @@ stl_as_sf <- function(table) {
 
     # create list of acceptable tables
     tableList <- c("stl_tbl_asthma", "stl_tbl_income", "stl_tbl_insurance",
-                   "stl_tbl_lead", "stl_tbl_smoking")
+                   "stl_tbl_lead", "stl_tbl_pop", "stl_tbl_race", "stl_tbl_smoking")
 
     # compare input with list of tables
     if (!!tblQ %nin% tableList) {
