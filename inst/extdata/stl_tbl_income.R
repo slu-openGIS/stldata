@@ -25,4 +25,4 @@ stl_tbl_income %>%
   select(geoID, tractCE, nameLSAD, everything()) -> stl_tbl_income
 
 save(stl_tbl_income, file = "data/stl_sf_tracts.rda")
-saveRDS(stl_tbl_income, "tests/testthat/stl_tbl_income.rds")
+saveRDS(stl_tbl_income, "tests/testthat/data/stl_tbl_income.rds")

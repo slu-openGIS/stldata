@@ -1,5 +1,7 @@
 context("Data check")
 
+library(sf)
+
 test_that("data objects are unchanged", {
   expect_equal_to_reference(stl_sf_boundary, "data/stl_sf_boundary.rds")
   expect_equal_to_reference(stl_sf_historic, "data/stl_sf_historic.rds")
