@@ -14,14 +14,16 @@ knitr::opts_chunk$set(
 
 # stldata <img src="man/figures/logo.png" align="right" />
 
-[![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
+[![lifecycle](https://img.shields.io/badge/lifecycle-questioning-blue.svg)](https://www.tidyverse.org/lifecycle/#questioning)
 [![Travis-CI Build Status](https://travis-ci.org/slu-openGIS/stldata.svg?branch=master)](https://travis-ci.org/slu-openGIS/stldata)
 [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/slu-openGIS/stldata?branch=master&svg=true)](https://ci.appveyor.com/project/chris-prener/stldata)
 [![Coverage Status](https://img.shields.io/codecov/c/github/slu-openGIS/stldata/master.svg)](https://codecov.io/github/slu-openGIS/stldata?branch=master)
 [![DOI](https://zenodo.org/badge/85344799.svg)](https://zenodo.org/badge/latestdoi/85344799)
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/stldata)](https://cran.r-project.org/package=stldata)
 
-The `stlData` package contains various data sets representing the City of St. Louis. These data sets are primary designed for teaching statistics, data science, and spatial data analysis using `R`.
+The `stlData` package contains various data sets representing the City of St. Louis. These data sets are primary designed for teaching statistics, data science, and spatial data analysis using `R`. 
+## Important Lifecycle Update
+**As of June 4, 2019,** this package has been moved to a ["questioning" lifecycle stats](https://www.tidyverse.org/lifecycle/#questioning) - some of its functionality has been shifted to the still-developing [`gateway` package](https://github.com/slu-openGIS/gateway), while other aspects are better handeled by teaching students to import raw data sources. Development has therefore been suspended, with no current plans to return to this package in the future.
 
 ## Installation
 
