@@ -15,15 +15,17 @@ Status](https://img.shields.io/codecov/c/github/slu-openGIS/stldata/master.svg)]
 
 The `stlData` package contains various data sets representing the City
 of St. Louis. These data sets are primary designed for teaching
-statistics, data science, and spatial data analysis using `R`. \#\#
-Important Lifecycle Update **As of June 4, 2019,** this package has been
-moved to a [“questioning” lifecycle
-stats](https://www.tidyverse.org/lifecycle/#questioning) - some of its
-functionality has been shifted to the still-developing [`gateway`
-package](https://github.com/slu-openGIS/gateway), while other aspects
-are better handeled by teaching students to import raw data sources.
-Development has therefore been suspended, with no current plans to
-return to this package in the future.
+statistics, data science, and spatial data analysis using `R`.
+
+## Important Lifecycle Update
+
+As of **June 4, 2019,** this package has been moved to a [“questioning”
+lifecycle stats](https://www.tidyverse.org/lifecycle/#questioning) -
+some of its functionality has been shifted to the still-developing
+[`gateway` package](https://github.com/slu-openGIS/gateway), while other
+aspects are better handeled by teaching students to import raw data
+sources. Development has therefore been suspended, with no current plans
+to return to this package in the future.
 
 ## Installation
 
